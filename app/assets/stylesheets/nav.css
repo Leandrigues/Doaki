@@ -1,115 +1,119 @@
-body, html {
-        padding: 0;
-        margin: 0;
-        background-color: #F6F6FF;
-    }
+nav {
+    background-color: #741AAC;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
 
-    nav {
-        background-color: #741AAC;
-        height: 70px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 10px;
-        font-weight: bold;
-    }
-
-    .logo {
-        font-family: "Lucida Console", Monaco, monospace;
-        color: #F6F6FF;
-        font-size: 30px;
-        text-decoration:none;
-        margin-left: 5px;
-    }
-
-    .nav-buttons {
-        color: #F6F6FF;
-        text-decoration:none;
-        margin-left: 5px;
-
-    }
-
-    .nav-buttons:hover {
-        cursor: pointer;
-        color: #F6F6FF;
-        background-color: transparent;
-    }
-
-    .nav-buttons:active {
-        color: white;
-    }
+.logo {
+    /* font-family: "Lucida Console", Monaco, monospace; */
     
-    .nav-buttons:visited {
-        color: #F6F6FF;
-        
-    }
+    font-family: 'ZCOOL KuaiLe', cursive;
+    /* font-family: 'Montserrat', sans-serif; */
+    color: #F6F6FF;
+    font-size: 30px;
+    text-decoration:none;
+    margin-left: 5px;
+}
 
-    .nav-page-buttons {
-        background-color: transparent;
-        outline: none;
-        border: none;
-        color: white;
-        font-family: "Lucida Console", Monaco, monospace;
-        font-weight: bold;
-        font-size: 13px;
-        display: inline-block;
-        height: 70px;
-        transition: color 0.5s, background-color 0.5s;
+.nav-buttons {
+    color: #F6F6FF;
+    text-decoration:none;
+    margin-left: 5px;
 
-    }
+}
 
-    .nav-page-buttons:hover {
-        color: #741AAC;
-        background-color: #F6F6FF;
-        cursor: pointer;
-    }
+.nav-buttons:hover {
+    cursor: pointer;
+    color: #F6F6FF;
+    background-color: transparent;
+}
 
-    .separate {
-        color: #F6F6FF;
-        font-weight: bold;
-    }
+.nav-buttons:active {
+    color: white;
+}
 
-    #profile {
-        /* justify-self: flex-end; */
-        margin-left: 50px;
-    }
+.nav-buttons:visited {
+    color: #F6F6FF;
+    
+}
+
+.nav-page-buttons {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+    height: 70px;
+    width: 75px;
+    transition: color 0.5s, background-color 0.5s;
+    margin: 0;
+
+}
+
+.nav-page-buttons:hover {
+    color: #741AAC;
+    background-color: #F6F6FF;
+    cursor: pointer;
+}
+
+.separate {
+    color: #F6F6FF;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-left: solid white 1px;
+    height: 20px;
+    margin: 0px 10px 0px 10px;
+}
+
+#profile {
+    /* justify-self: flex-end; */
+    margin-left: 50px;
+}
 
 
-    .nav-buttons-list {
-        margin-right: 5px;
-    }
+.nav-buttons-list {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5px;
+    align-items: center;
+}
 
-    .new-donation {
+.new-donation:active, .new-donation:visited {
+    color: white;
+}
 
-    }
-
-    .new-donation:active, .new-donation:visited {
-        color: white;
-    }
-
-    .new-donation:hover {
-        color: white;
-        background-color: transparent;
-    }
+.new-donation:hover {
+    color: white;
+    background-color: transparent;
+}
 
 
-    .donation-button {
-        cursor: pointer;
-        background-color: transparent;
-        background-color: #741AAC;
-        outline: none;
-        margin-top: 20px;
-        border-radius: 3.5px;
-        border: none;
-        height: 50px;
-        font-weight: bold;
-        font-style: none;
-        text-decoration: none;
-        font-family: "Lucida Console", Monaco, monospace;
-        color: white;
-        height: 50px;
-    }
+.donation-button {
+    cursor: pointer;
+    background-color: #F6F6FF;
+    margin-left: 790px;
+    color: #741AAC;
+    outline: none;
+    border-radius: 3.5px;
+    border: none;
+    height: 50px;
+    font-weight: bold;
+    font-style: none;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    height: 50px;
+}
 
-    .formlixo {
-        color: red;
-    }
+.form-button-pages {
+    color: red;
+}

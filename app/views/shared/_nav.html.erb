@@ -1,6 +1,18 @@
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+</style>
+
+</head>
 <nav>
-    <%= link_to "Donate", home_index_path, :class => "logo nav-buttons" %>
+    <%= link_to "Doaki", home_index_path, :class => "logo nav-buttons" %>
     <ul class="nav-buttons-list">
-        <%= button_to "HOME", home_index_path, :class => "nav-buttons nav-page-buttons", :method => :get %>
+        <%= button_to "HOME", home_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
+        <span class="separate">&nbsp</span>
+        <%= button_to "SOBRE", home_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
+
     </ul>
+
+    <%= button_to "DOAR", new_donation_path, form_class: "form-button", :class => "donation-button", :method => :get%>
 </nav>

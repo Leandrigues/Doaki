@@ -1,0 +1,115 @@
+body, html {
+        padding: 0;
+        margin: 0;
+        background-color: #F6F6FF;
+    }
+
+    nav {
+        background-color: #741AAC;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    .logo {
+        font-family: "Lucida Console", Monaco, monospace;
+        color: #F6F6FF;
+        font-size: 30px;
+        text-decoration:none;
+        margin-left: 5px;
+    }
+
+    .nav-buttons {
+        color: #F6F6FF;
+        text-decoration:none;
+        margin-left: 5px;
+
+    }
+
+    .nav-buttons:hover {
+        cursor: pointer;
+        color: #F6F6FF;
+        background-color: transparent;
+    }
+
+    .nav-buttons:active {
+        color: white;
+    }
+    
+    .nav-buttons:visited {
+        color: #F6F6FF;
+        
+    }
+
+    .nav-page-buttons {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: white;
+        font-family: "Lucida Console", Monaco, monospace;
+        font-weight: bold;
+        font-size: 13px;
+        display: inline-block;
+        height: 70px;
+        transition: color 0.5s, background-color 0.5s;
+
+    }
+
+    .nav-page-buttons:hover {
+        color: #741AAC;
+        background-color: #F6F6FF;
+        cursor: pointer;
+    }
+
+    .separate {
+        color: #F6F6FF;
+        font-weight: bold;
+    }
+
+    #profile {
+        /* justify-self: flex-end; */
+        margin-left: 50px;
+    }
+
+
+    .nav-buttons-list {
+        margin-right: 5px;
+    }
+
+    .new-donation {
+
+    }
+
+    .new-donation:active, .new-donation:visited {
+        color: white;
+    }
+
+    .new-donation:hover {
+        color: white;
+        background-color: transparent;
+    }
+
+
+    .donation-button {
+        cursor: pointer;
+        background-color: transparent;
+        background-color: #741AAC;
+        outline: none;
+        margin-top: 20px;
+        border-radius: 3.5px;
+        border: none;
+        height: 50px;
+        font-weight: bold;
+        font-style: none;
+        text-decoration: none;
+        font-family: "Lucida Console", Monaco, monospace;
+        color: white;
+        height: 50px;
+    }
+
+    .formlixo {
+        color: red;
+    }

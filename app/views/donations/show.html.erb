@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @donation.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @donation.description %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @donation.street %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @donation.detail %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @donation.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @donation.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @donation.email %>
+</p>
+
+<%= link_to 'Edit', edit_donation_path(@donation) %> |
+<%= link_to 'Back', donations_path %>

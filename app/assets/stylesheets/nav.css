@@ -1,28 +1,31 @@
+:root {
+  --main-color: #1D84B5; 
+  /* --main-color: #176087; */
+}
+
 nav {
-    background-color: #741AAC;
-    height: 70px;
+    background-color: var(--main-color);
+    height: 6em;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-left: 10px;
     font-weight: bold;
+    justify-content: flex-start;
 }
 
 .logo {
-    /* font-family: "Lucida Console", Monaco, monospace; */
-    
     font-family: 'ZCOOL KuaiLe', cursive;
-    /* font-family: 'Montserrat', sans-serif; */
     color: #F6F6FF;
-    font-size: 30px;
+    font-size: 35px;
     text-decoration:none;
-    margin-left: 5px;
+    margin-left: 10%;
+    margin-right: 0;
 }
 
 .nav-buttons {
     color: #F6F6FF;
     text-decoration:none;
-    margin-left: 5px;
 
 }
 
@@ -50,15 +53,14 @@ nav {
     font-weight: bold;
     font-size: 13px;
     display: inline-block;
-    height: 70px;
+    height: 6em;
     width: 75px;
     transition: color 0.5s, background-color 0.5s;
-    margin: 0;
 
 }
 
 .nav-page-buttons:hover {
-    color: #741AAC;
+    color: var(--main-color);
     background-color: #F6F6FF;
     cursor: pointer;
 }
@@ -74,32 +76,23 @@ nav {
 
 #profile {
     /* justify-self: flex-end; */
-    margin-left: 50px;
 }
 
 
 .nav-buttons-list {
     display: flex;
     flex-direction: row;
-    margin-right: 5px;
     align-items: center;
-}
-
-.new-donation:active, .new-donation:visited {
-    color: white;
-}
-
-.new-donation:hover {
-    color: white;
-    background-color: transparent;
+    padding: 0;
+    margin-left: 2em;
 }
 
 
 .donation-button {
+    display: block;
     cursor: pointer;
     background-color: #F6F6FF;
-    margin-left: 790px;
-    color: #741AAC;
+    color: var(--main-color);
     outline: none;
     border-radius: 3.5px;
     border: none;
@@ -111,9 +104,14 @@ nav {
     padding-right: 40px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    height: 50px;
+
 }
 
 .form-button-pages {
     color: red;
+}
+
+.form-button {
+    margin-left: auto;
+    margin-right: 2em;
 }

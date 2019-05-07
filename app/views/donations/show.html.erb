@@ -35,5 +35,11 @@
   <%= @donation.email %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@donation.image) %>
+</p>
+
+
 <%= link_to 'Edit', edit_donation_path(@donation) %> |
 <%= link_to 'Back', donations_path %>

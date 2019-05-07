@@ -10,7 +10,13 @@
 <div class="donations donation-flex-column-nowrap">
     <% @donations.each do |donation| %>
       <div class="donation donation-flex-row-wrap">
-        <%= image_tag(donation.image) %>
+        <% if donation.image.attached? %>
+          <%= image_tag(donation.image, :style => "width: 300px") %>
+        <% else %>
+          <div>
+          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :style => "width: 300px") %>
+          </div>
+        <% end%>
         <div class="donation-about donation-flex-column-nowrap">
           <h2><%= donation.title%></h2>
           <p><%=donation.description%></p>

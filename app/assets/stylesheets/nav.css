@@ -1,6 +1,6 @@
 :root {
   --main-color: #1D84B5; 
-  /* --main-color: #176087; */
+  --main-white: #F6F6FF;
 }
 
 nav {
@@ -16,31 +16,30 @@ nav {
 
 .logo {
     font-family: 'ZCOOL KuaiLe', cursive;
-    color: #F6F6FF;
+    color: var(--main-white);
     font-size: 35px;
     text-decoration:none;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 0;
 }
 
 .nav-buttons {
-    color: #F6F6FF;
+    color: var(--main-white);
     text-decoration:none;
-
 }
 
 .nav-buttons:hover {
     cursor: pointer;
-    color: #F6F6FF;
+    color: var(--main-white);
     background-color: transparent;
 }
 
 .nav-buttons:active {
-    color: white;
+    color: var(--main-white);
 }
 
 .nav-buttons:visited {
-    color: #F6F6FF;
+    color: var(--main-white);
     
 }
 
@@ -48,7 +47,7 @@ nav {
     background-color: transparent;
     outline: none;
     border: none;
-    color: white;
+    color: var(--main-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 13px;
@@ -61,12 +60,12 @@ nav {
 
 .nav-page-buttons:hover {
     color: var(--main-color);
-    background-color: #F6F6FF;
+    background-color: var(--main-white);
     cursor: pointer;
 }
 
 .separate {
-    color: #F6F6FF;
+    color: var(--main-white);
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     border-left: solid white 1px;
@@ -91,7 +90,7 @@ nav {
 .donation-button {
     display: block;
     cursor: pointer;
-    background-color: #F6F6FF;
+    background-color: var(--main-white);
     color: var(--main-color);
     outline: none;
     border-radius: 3.5px;

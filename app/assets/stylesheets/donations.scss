@@ -1,3 +1,59 @@
 // Place all the styles related to the Donations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+    box-sizing: border-box
+}
+
+.donation-flex-column-nowrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.donation-about { 
+
+    align-items: center;
+    width: 40vw;
+    height: 50vh;
+    justify-content: space-around;
+}
+.donation-flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.donation {
+    background-color:var(--main-color);
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.donation-image {
+    height: 50vh;
+    width: 50vw;
+}
+
+.title {
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    padding: 0.5em;
+}
+
+.donation-header {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.donations {
+    justify-content: space-around;
+}
+
+.donation-options {
+    width: 100%;
+    justify-content: space-around;
+}

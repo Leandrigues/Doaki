@@ -1,7 +1,7 @@
 <%= render partial: "shared/nav" %>
 
 
-<!--<p id="notice"><%= notice %></p>-->
+<!-- <p id="notice"><%= notice %></p> -->
 <header class="donation-header donation-flex-row-wrap">
   <h1 class="title donation-flex-row-wrap">Donations</h1>
   <h1><%= link_to 'New Donation', new_donation_path %></h1>
@@ -10,7 +10,6 @@
 <div class="donations donation-flex-column-nowrap">
     <% @donations.each do |donation| %>
       <div class="donation donation-flex-row-wrap">
-        <%# <img class="donation-image" src = "https://www.gannett-cdn.com/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2017/10/05/USATODAY/usatsports/glass-jar-full-of-cois-with-donate-written-on-it-charity-donation-philanthropy_large.jpg?width=3200&height=1680&fit=crop"> %>
         <%= image_tag(donation.image) %>
         <div class="donation-about donation-flex-column-nowrap">
           <h2><%= donation.title%></h2>

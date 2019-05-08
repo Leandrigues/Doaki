@@ -13,11 +13,7 @@
 
   <div class="label">
     <%= form.label :title, :class => "label-text" %>
-    <%= form.text_field :title, :class => "input-field" %>
-  </div>
-  <div class="label">
-    <%= form.label :image, :class => "label-text" %>
-    <%= form.file_field :image, :class => "file-field" %>
+    <%= form.text_field :title, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
   <div class="label">
     <%= form.label :street, :class => "label-text" %>
@@ -33,17 +29,19 @@
   </div>
   <div class="label">
     <%= form.label :phone, :class => "label-text" %>
-    <%= form.text_field :phone, :class => "input-field" %>
+    <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
   <div class="label">
     <%= form.label :email, :class => "label-text" %>
-    <%= form.text_field :email, :class => "input-field"%>
+    <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
   <div class="label">
     <%= form.label :description, :class => "label-text" %>
-    <%= form.text_area :description, :class => "input-field" %>
+    <%= form.text_area :description, :class => "input-field input-description", :placeholder => "Obrigatorio" %>
   </div>
-  <div class="submit-label">
+  <div class="label-buttons">
+    <label for="file-field" class="file-button">Image*</label>
+    <%= form.file_field :image, :id => "file-field" %>
     <%= form.submit "Submit", :class => "submit-button" %>
   </div>
 <%end%>

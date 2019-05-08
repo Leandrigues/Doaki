@@ -6,55 +6,90 @@
 	max-width: 500px;
     font-family: 'Montserrat', sans-serif;
     padding: 20px 12px 10px 20px;
+    border: 3px solid #1D84B5;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto; 
+    display: flex;
+    flex-direction: column;
 }
 
 .label {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	margin: 0 0 15px 0;
 }
 
 .label-text {
-	width: 90px;
-	float: left;
+	font-weight: bold;
 	padding-top: 8px;
 	padding-right: 5px;
 }
 
-.file-field {
-	
+.input-description {
+	font-size: 12px;
 }
 
 .input-field {
-	width: 80%;
+	font-family: 'Montserrat', sans-serif;
+	width: 98.5%;
+	max-width: 98.5%;
 	box-sizing: border-box;
 	border: 1px solid #C2C2C2;
-	box-shadow: 1px 1px 4px #EBEBEB;
 	border-radius: 3px;
 	padding: 7px;
 	outline: none;
+	border-top-style: none;
+	border-left-style: none;
+	border-right-style: none;
+	height: 37px;
+}
+
+.input-field:actives {
 }
 
 .input-field:focus {
-	border: 1px solid #0C0;
-}
-
-.submit-label {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	border: 1px solid #1D84B5;
+    transition: border 1.5s;
 }
 
 .submit-button {
 	font-family: 'Montserrat', sans-serif;
+	width: 20%;
 	border: none;
 	padding: 8px 15px 8px 15px;
 	background: #1D84B5;
 	color: #F6F6FF;
 	box-shadow: 1px 1px 4px #EBEBEB;
-	border-radius: 3px;
+	border-radius: 20px;
 }
 
 .submit-button:hover {
-	background: #F6F6FF;
-	color: #1D84B5;
+	background: #34699a;
+}
+
+input[type='file'] {
+  display: none
+}
+
+.file-button {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+	width: 50%;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 20px;
+	padding: 7px;
+	outline: none;
+    background-color: #1D84B5;
+	color: #F6F6FF;
+}
+
+.file-button:hover {
+  	background-color: #34699a;
+}
+
+.label-buttons {
+	display: block;
 }

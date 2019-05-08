@@ -1,8 +1,9 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <%= form_with(model: donation, local: true, class: "form") do |form| %>
   <% if donation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation from being saved:</h2>
-
       <ul>
       <% donation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -15,33 +16,60 @@
     <%= form.label :title, :class => "label-text" %>
     <%= form.text_field :title, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
+
   <div class="label">
     <%= form.label :street, :class => "label-text" %>
     <%= form.text_field :street, :class => "input-field" %>
   </div>
+
+  <div class="label">
+    <%= form.label :image, :class => "label-text" %>
+    <div class="file-label">
+      <input type="text" name="file" id="file" class="input-file" placeholder="Arquivo" 
+      readonly="readonly">
+      <label class="file-button">Browse</label>
+    </div>
+    <%= form.file_field :image, :id => "file-field", :class => "file-field" %>
+  </div>
+
   <div class="label">
     <%= form.label :detail, :class => "label-text" %>
     <%= form.text_field :detail, :class => "input-field" %>
   </div>
+
   <div class="label">
     <%= form.label :zip, :class => "label-text" %>
     <%= form.text_field :zip, :class => "input-field" %>
   </div>
+
   <div class="label">
     <%= form.label :phone, :class => "label-text" %>
     <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
+
   <div class="label">
     <%= form.label :email, :class => "label-text" %>
     <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
+
   <div class="label">
     <%= form.label :description, :class => "label-text" %>
     <%= form.text_area :description, :class => "input-field input-description", :placeholder => "Obrigatorio" %>
   </div>
-  <div class="label-buttons">
-    <label for="file-field" class="file-button">Image*</label>
-    <%= form.file_field :image, :id => "file-field" %>
+
+  <div class="label submit-label">
     <%= form.submit "Submit", :class => "submit-button" %>
   </div>
+
 <%end%>
+
+<script>
+  $('.file-button').on('click', function() {
+    $('.file-field').trigger('click');
+  });
+
+  $('.file-field').on('change', function() {
+    var fileName = $(this)[0].files[0].name;
+    $('#file').val(fileName);
+  });
+</script>

@@ -5,11 +5,11 @@
 
 nav {
     background-color: var(--main-color);
-    height: 6em;
+    height: 5.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 2.5rem;
     font-weight: bold;
     justify-content: flex-start;
 }
@@ -17,7 +17,7 @@ nav {
 .logo {
     font-family: 'ZCOOL KuaiLe', cursive;
     color: var(--main-white);
-    font-size: 35px;
+    font-size: 2.4rem;
     text-decoration:none;
     margin-left: 5%;
     margin-right: 0;
@@ -50,11 +50,11 @@ nav {
     color: var(--main-white);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.8rem;
     display: inline-block;
-    height: 6em;
-    width: 75px;
+    width: 4.8rem;
     transition: color 0.5s, background-color 0.5s;
+    height: 100%;
 
 }
 
@@ -68,9 +68,9 @@ nav {
     color: var(--main-white);
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    border-left: solid white 1px;
-    height: 20px;
-    margin: 0px 10px 0px 10px;
+    border-left: solid white 0.1rem;
+    height: 1.5rem;
+    margin: 0rem 1rem 0rem 1rem;
 }
 
 #profile {
@@ -84,6 +84,7 @@ nav {
     align-items: center;
     padding: 0;
     margin-left: 2em;
+    height: 100%;
 }
 
 
@@ -93,14 +94,14 @@ nav {
     background-color: var(--main-white);
     color: var(--main-color);
     outline: none;
-    border-radius: 3.5px;
+    border-radius: 0.3rem;
     border: none;
-    height: 50px;
+    height: 3.1rem;
     font-weight: bold;
     font-style: none;
-    font-size: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-size: 1.3rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 
@@ -108,9 +109,10 @@ nav {
 
 .form-button-pages {
     color: red;
+    height: 100%;
 }
 
 .form-button {
     margin-left: auto;
-    margin-right: 2em;
+    margin-right: 1rem;
 }

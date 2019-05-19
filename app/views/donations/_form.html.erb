@@ -39,17 +39,18 @@
 
   <div class="label">
     <%= form.label :zip, :class => "label-text" %>
-    <%= form.text_field :zip, :class => "input-field" %>
+    <%= form.text_field :zip, :class => "input-field" , :placeholder => "Obrigatorio. Formato esperado: xxxxx-xxx"%>
   </div>
 
   <div class="label">
     <%= form.label :phone, :class => "label-text" %>
-    <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio" %>
+    <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado : (xx)xxxxxxxxx ou (xx)xxxxxxxx" %>
   </div>
 
   <div class="label">
+
     <%= form.label :email, :class => "label-text" %>
-    <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio" %>
+    <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado  : user@email.com(.br)" %>
   </div>
 
   <div class="label">

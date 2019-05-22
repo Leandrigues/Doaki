@@ -1,9 +1,12 @@
+<style>
+
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <%= form_with(model: donation, local: true, class: "form") do |form| %>
   <% if donation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation from being saved:</h2>
+      <h2><%= pluralize(donation.errors.count, "error") %> Erro ao criar doação </h2>
       <ul>
       <% donation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -29,7 +32,10 @@
       readonly="readonly">
       <label class="file-button">Browse</label>
     </div>
-    <%= form.file_field :image, :id => "file-field", :class => "file-field" %>
+    <%= form.file_field :image, :id => "file-field", :class => "file-field"%>
+    <%# <div class="image-container-form">
+      <img src="" alt="" class="donation-image-form">
+    </div> %>
   </div>
 
   <div class="label">
@@ -65,6 +71,32 @@
 <%end%>
 
 <script>
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          let reader = new FileReader();
+          // <div class="image-container-form">
+            // <img src="" alt="" class="donation-image-form">
+          // </div>
+          let container = `
+              <div class='image-container-form'>
+                <img src='' alt='' class='donation-image-form'>
+              </div>
+          `
+          $(container).insertAfter(".file-field")
+
+          reader.onload = function (e) {
+              $('.donation-image-form').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $(".file-field").change(function(){
+      readURL(this);
+  });
+
+
   $('.file-button').on('click', function() {
     $('.file-field').trigger('click');
   });

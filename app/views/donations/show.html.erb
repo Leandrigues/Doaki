@@ -5,7 +5,9 @@
 </head>
 <div class="container">
   <div class="photo-container">
-    <%= image_tag(@donation.image, :class => "photo") %>
+    <% if @donation.image.attached? %>
+      <%= image_tag(@donation.image, :class => "photo") %>
+    <% end %>
   </div>
   </span>
   <div class="container-infos">

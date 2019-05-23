@@ -26,16 +26,15 @@
   </div>
 
   <div class="label">
-    <%= form.label :image, :class => "label-text" %>
+    <%= form.label :images, :class => "label-text" %>
     <div class="file-label">
       <input type="text" name="file" id="file" class="input-file" placeholder="Arquivo" 
       readonly="readonly">
       <label class="file-button">Browse</label>
     </div>
-    <%= form.file_field :image, :id => "file-field", :class => "file-field"%>
-    <%# <div class="image-container-form">
-      <img src="" alt="" class="donation-image-form">
-    </div> %>
+    <%= form.file_field :images, multiple: true, :id => "file-field", :class => "file-field"%>
+    <div class="image-container-form">
+    </div>
   </div>
 
   <div class="label">
@@ -78,11 +77,9 @@
             // <img src="" alt="" class="donation-image-form">
           // </div>
           let container = `
-              <div class='image-container-form'>
                 <img src='' alt='' class='donation-image-form'>
-              </div>
           `
-          $(container).insertAfter(".file-field")
+          $(".image-container-form").append(container)
 
           reader.onload = function (e) {
               $('.donation-image-form').attr('src', e.target.result);

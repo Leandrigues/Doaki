@@ -7,12 +7,14 @@
 </head>
 <nav>
     <%= link_to "Doaki", home_index_path, :class => "logo nav-buttons" %>
-    <ul class="nav-buttons-list">
-        <%= button_to "HOME", home_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
-        <span class="separate">&nbsp</span>
-        <%= button_to "SOBRE", about_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
-
-    </ul>
-
-    <%= button_to "DOAR", new_donation_path, form_class: "form-button", :class => "donation-button", :method => :get%>
+    <div>
+        <input type="text" placeholder="O que voce quer?" class="nav-search"></input>
+        <button class="nav-button-search"></button>
+        <ul class="nav-buttons-list">
+            <%= button_to "HOME", home_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
+            <span class="separate">&nbsp</span>
+            <%= button_to "SOBRE", about_index_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
+        </ul>
+        <%= button_to "DOAR", new_donation_path, form_class: "form-button", :class => "donation-button", :method => :get%>
+    </div>
 </nav>

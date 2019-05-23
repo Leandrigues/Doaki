@@ -3,6 +3,11 @@
   --main-white: #F6F6FF;
 }
 
+.form-button {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 nav {
     background-color: var(--main-color);
     height: 5.5rem;
@@ -11,7 +16,13 @@ nav {
     align-items: center;
     padding-left: 2.5rem;
     font-weight: bold;
-    justify-content: flex-start;
+    justify-content: space-between
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
 .logo {
@@ -82,9 +93,13 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 0;
     margin-left: 2em;
+    margin-right: 2em;
     height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
@@ -104,6 +119,8 @@ nav {
     padding-right: 2.4rem;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
@@ -115,4 +132,26 @@ nav {
 .form-button {
     margin-left: auto;
     margin-right: 1rem;
+}
+
+.nav-search {
+    font-family: 'Montserrat', sans-serif;
+    width: 15rem;
+    height: 40px;
+    padding: 0.8rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+    border-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: var(--main-white);
+}
+
+.nav-button-search {
+    width: 2rem;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 0 0.3rem 0.3rem 0;
+    border-style: none;
+    background-color: var(--main-white);
 }

@@ -50,7 +50,6 @@
 
 .input-field:focus {
 	border: 1px solid var(--main-color);
-    transition: border 1.5s;
 }
 
 .submit-label {

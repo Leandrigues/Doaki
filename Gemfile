@@ -65,6 +65,7 @@ end
 group :production do
   # Heroku doesn't support Sqlite3, so we need to use Postgres in Production
   gem 'pg'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

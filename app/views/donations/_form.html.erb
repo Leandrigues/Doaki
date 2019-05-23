@@ -26,13 +26,13 @@
   </div>
 
   <div class="label">
-    <%= form.label :images, :class => "label-text" %>
+    <%= form.label :image, :class => "label-text" %>
     <div class="file-label">
       <input type="text" name="file" id="file" class="input-file" placeholder="Arquivo" 
       readonly="readonly">
       <label class="file-button">Browse</label>
     </div>
-    <%= form.file_field :images, multiple: true, :id => "file-field", :class => "file-field"%>
+    <%= form.file_field :image, :id => "file-field", :class => "file-field"%>
     <div class="image-container-form">
     </div>
   </div>

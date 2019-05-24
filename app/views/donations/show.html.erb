@@ -4,8 +4,10 @@
 </head>
 <div class="container">
   <div class="photo-container">
-    <% if @donation.image.attached? %>
-      <%= image_tag(@donation.image, :class => "photo") %>
+    <% if @donation.images.attached? %>
+      <% (0...@donation.images.count).each do |index| %>
+      <%= image_tag(@donation.images[index], :class => "photo") %>
+      <% end %>
     <% end %>
   </div>
   </span>

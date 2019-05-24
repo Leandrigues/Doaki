@@ -20,8 +20,12 @@
     padding-left: 3rem;
     padding-right: 3rem;
     flex-grow: 1;
+    flex-wrap: wrap;
     border-right: solid 1px #EAEBED;
     border-radius: var(--border-radius-container);
+    flex-basis: 30rem;
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -29,8 +33,11 @@
     -webkit-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
-    width: 30rem;
+    width: 14rem;
+    height: 14rem;
+    margin: 0 0 1rem 1rem;
     border-radius: 1.1rem;
+    flex-grow: 1;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
@@ -48,12 +55,6 @@
     background-color: var(--container-background);
     border-radius: var(--border-radius-container);
     padding-right: 1.5rem;
-    /* -webkit-user-select: none; */
-    /* -khtml-user-select: none; */
-    /* -moz-user-select: none; */
-    /* -o-user-select: none; */
-    /* user-select: none; */
-
 }
 
 .title-donation {

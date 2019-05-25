@@ -29,3 +29,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+db/migrate/20190524184435_create_active_storage_tables.active_storage.rb

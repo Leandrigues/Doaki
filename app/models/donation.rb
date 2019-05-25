@@ -1,7 +1,6 @@
 class Donation < ApplicationRecord
+  has_many_attached :images
   include EmailValidatable
-
-  has_one_attached :image
   validates :title, presence: true
   validates :description, presence: true
   validates :detail, presence: true

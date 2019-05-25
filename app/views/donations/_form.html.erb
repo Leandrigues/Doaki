@@ -26,15 +26,13 @@
   </div>
 
   <div class="label">
-    <%= form.label :image, :class => "label-text" %>
+    <%= form.label :images, :class => "label-text" %>
     <div class="file-label">
       <input type="text" name="file" id="file" class="input-file" placeholder="Arquivo" 
       readonly="readonly">
       <label class="file-button">Browse</label>
     </div>
-    <%= form.file_field :image, :id => "file-field", :class => "file-field"%>
-    <div class="image-container-form">
-    </div>
+    <%= form.file_field :images, multiple: true, :id => "file-field", :class => "file-field"%>
   </div>
 
   <div class="label">
@@ -70,28 +68,60 @@
 <%end%>
 
 <script>
-  function readURL(input) {
-      if (input.files && input.files[0]) {
-          let reader = new FileReader();
-          // <div class="image-container-form">
-            // <img src="" alt="" class="donation-image-form">
-          // </div>
-          let container = `
-                <img src='' alt='' class='donation-image-form'>
-          `
-          $(".image-container-form").append(container)
+  // function readURL(input) {
+  //     if (input.files && input.files[0]) {
+  //         let reader = new FileReader();
+  //         // <div class="image-container-form">
+  //           // <img src="" alt="" class="donation-image-form">
+  //         // </div>
+  //         let container = `
+  //               <img src='' alt='' class='donation-image-form'>
+  //         `
+  //         $(".image-container-form").append(container)
+          
+  //         reader.onload = function (e) {
+  //             console.log(input.files[0])
+  //             $('.donation-image-form').attr('src', e.target.result);
+  //         }
 
-          reader.onload = function (e) {
-              $('.donation-image-form').attr('src', e.target.result);
-          }
+  //         reader.readAsDataURL(input.files[0]);
+  //     }
+  // }
+$(function() {
+    // Multiple images preview in browser
+    var imagesPreview = function(input, placeToInsertImagePreview) {
+        if (input.files) {
+            var filesAmount = input.files.length;
 
-          reader.readAsDataURL(input.files[0]);
-      }
-  }
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
 
-  $(".file-field").change(function(){
-      readURL(this);
-  });
+                reader.onload = function(event) {
+                    $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview).attr('class', 'donation-image-form');
+                }
+
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+
+    };
+
+    let divContainer = `<div class="image-container-form">
+                        </div>
+                        `
+    $('.file-field').on('change', function() {
+      console.log('changed')
+      $(divContainer).insertAfter('.file-field')
+    })
+    $('.file-field').on('change', function() {
+        imagesPreview(this, '.image-container-form');
+    });
+});
+
+
+  // $(".file-field").change(function(){
+      // readURL(this);
+  // });
 
 
   $('.file-button').on('click', function() {

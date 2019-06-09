@@ -154,4 +154,17 @@ nav div {
     border-radius: 0 0.3rem 0.3rem 0;
     border-style: none;
     background-color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-button-search:hover {
+    background-color: #d9d9df;
+}
+
+.search-icon {
+    margin-bottom: auto;
+    margin-top: auto;
+    color: var(--main-color);
 }

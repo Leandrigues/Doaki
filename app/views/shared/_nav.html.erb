@@ -9,7 +9,9 @@
     <%= link_to "Doaki", root_path, :class => "logo nav-buttons" %>
     <div>
         <input type="text" placeholder="O que voce quer?" class="nav-search"></input>
-        <button class="nav-button-search"></button>
+        <button class="nav-button-search">
+            <i class="material-icons search-icon">search</i>
+        </button>
         <ul class="nav-buttons-list">
             <%= button_to "HOME", root_path, form_class: "form-button-pages", :class => "nav-buttons nav-page-buttons", :method => :get %>
             <span class="separate">&nbsp</span>

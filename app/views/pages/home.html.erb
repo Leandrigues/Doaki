@@ -1,1 +1,19 @@
 <%= render partial: "/shared/nav" %>
+
+<h1>Donations</h1>
+
+<div class="donation-list">
+    <% @donations.each do |donation| %>
+      <div class="donation-each">
+        <% if donation.images.attached? %>
+          <%= image_tag(donation.images[0], :class => "donation-image") %>
+        <% else %>
+          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "donation-image") %>
+        <% end%>
+        <div class="donation-text">
+          <h2><%= donation.title %></h2>
+          <p><%= donation.description %></p>
+        </div>
+      </div>
+    <% end %>
+</div>

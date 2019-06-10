@@ -6,41 +6,49 @@
 h1 {
 	color: var(--main-color);
 	text-align: center;
-	font-size: 2rem;
+	font-size: 3rem;
 	margin: 0;
 	padding: 1rem;
 }
 
 .donation-list {
+	margin: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .donation-each {
-	padding: 1rem;
-	margin: 1rem;
-	width: 45%;
+	width: 60%;
 	height: 15rem;
+	padding: 1rem;
+	margin: 0 1rem 2rem 1rem;
 	border: solid 0.1rem var(--main-color);
 	border-radius: 0.3rem;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
+.donation-each:hover {
+	background-color: #d9d9df;
+}
+
 .donation-image {
-	margin: 0;
 	width: 50%;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	padding: 0;
 }
 
 .donation-image img {
-	margin: 0;
+	max-height: 80%;
+	max-width: 80%;
 	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .donation-text {
@@ -48,5 +56,14 @@ h1 {
 }
 
 .donation-text h2 {
+	width: 100%;
 	text-align: center;
+	height: 2.5rem;
+	overflow: hidden;
+}
+
+.donation-text p {
+	width: 100%;
+	height: 8rem;
+	overflow-y: auto;
 }

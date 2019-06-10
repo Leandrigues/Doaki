@@ -5,11 +5,13 @@
 <div class="donation-list">
     <% @donations.each do |donation| %>
       <div class="donation-each">
-        <% if donation.images.attached? %>
-          <%= image_tag(donation.images[0], :class => "donation-image") %>
-        <% else %>
-          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "donation-image") %>
-        <% end%>
+      	<div class="donation-image">
+	        <% if donation.images.attached? %>
+	          <%= image_tag(donation.images[0]) %>
+	        <% else %>
+	          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg") %>
+	        <% end%>
+      	</div>
         <div class="donation-text">
           <h2><%= donation.title %></h2>
           <p><%= donation.description %></p>

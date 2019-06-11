@@ -5,7 +5,7 @@
       <div class="donation-each">
       	<div class="donation-image-container">
 	        <% if donation.images.attached? %>
-	          <%= image_tag(donation.images[0], :class => "donation-image") %>
+	            <%= image_tag(donation.images[0], :class => "donation-image") %>
 	        <% else %>
 	          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "donation-no-image") %>
 	        <% end%>
@@ -13,6 +13,7 @@
         <div class="donation-text">
           <h2><%= donation.title %></h2>
           <p><%= donation.description %></p>
+          <p><%= link_to  "Ver Doação", controller: "donations", action: "show", id: donation.id %></p>
         </div>
       </div>
     <% end %>

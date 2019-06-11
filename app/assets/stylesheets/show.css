@@ -33,7 +33,7 @@
     -webkit-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
-    width: 14rem;
+    width: 20rem;
     height: 14rem;
     margin: 0 0 1rem 1rem;
     border-radius: 1.1rem;
@@ -60,11 +60,12 @@
 .title-donation {
     font-size: 3rem;
     margin: 0;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .infos-donation {
     margin: 0;
+    margin-bottom: 0.5rem;
     font-size: 1.1rem;
     font-style: italic;
     

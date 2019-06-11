@@ -10,6 +10,7 @@ class DonationsController < ApplicationController
   # GET /donations/1
   # GET /donations/1.json
   def show
+    @donation = Donation.find(params[:id])
   end
 
   # GET /donations/new

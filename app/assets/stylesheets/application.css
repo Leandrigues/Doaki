@@ -17,12 +17,12 @@
 
 :root {
     --main-color: #1D84B5; 
-    --main-white: #F6F6FF;
+    --main-white: rgb(236, 236, 236);
 }
 
 body, html {
     margin: 0;
-    background-color: #EAEBED;
+    background-color: var(--main-white);
     /* padding: 0; */
 }
 

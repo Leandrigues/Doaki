@@ -30,7 +30,11 @@
     <div class="file-label">
       <input type="text" name="file" id="file" class="input-file" placeholder="Arquivo" 
       readonly="readonly">
-      <label class="file-button">Browse</label>
+      <label class="file-button">
+        <i class="material-icons">
+          add_a_photo
+        </i>
+      </label>
     </div>
     <%= form.file_field :images, multiple: true, :id => "file-field", :class => "file-field"%>
   </div>
@@ -62,7 +66,12 @@
   </div>
 
   <div class="label submit-label">
-    <%= form.submit "Submit", :class => "submit-button" %>
+      <button class="submit-button">
+      <i class="material-icons">
+        done
+      </i>
+      <%= form.submit %>
+    </button>
   </div>
 
 <%end%>

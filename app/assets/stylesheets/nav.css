@@ -134,9 +134,29 @@ nav div {
 
 
 .profile-icon {
-    color: white;
-    /* margin-right: 1rem;  */
+    color: var(--main-white);
+    box-sizing: border-box;
     margin-left: auto;
+    margin: 0;
+    cursor: pointer;
+
+}
+
+.profile-icon:hover {
+    color: var(--main-color);
+    margin-left: auto;
+}
+
+#teste {
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 36px;
+    padding: 0;
+}
+
+#teste:hover {
+    transition: background-color 0.5s;    
+    background-color: var(--main-white);
 }
 
 .nav-search {

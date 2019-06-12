@@ -1,4 +1,6 @@
 <%= form_with(model: user, local: true, class: "form form-users") do |form| %>
+  <h1 class="form-title form-title-user">Crie sua conta</h1>
+
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>

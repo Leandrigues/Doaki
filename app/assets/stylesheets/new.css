@@ -3,13 +3,16 @@
 
 .form-title {
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-family: 'Kanit', sans-serif;
-	color: #1D84B5;
+	color: var(--main-color);
 	margin-bottom: 0;
 	font-size: 40px;
-	margin-top: 2.4rem;
 
+	font-family: 'Raleway', sans-serif;
+}
+
+.form-title-user {
+	font-size: 20px;
+	color: rgb(88, 88, 88);
 }
 
 .div-back-button {

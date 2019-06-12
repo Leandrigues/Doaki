@@ -6,25 +6,26 @@
 
 </head>
 <nav>
-    <%= link_to "Doaki", root_path, :class => "logo" %>
     <div>
+        <%= link_to "Doaki", root_path, :class => "logo" %>
+    </div>
+    <div class="nav-search-bar">
         <input type="text" placeholder="O que está procurando?" class="nav-search">
         <button class="nav-button-search">
             <i class="material-icons search-icon">search</i>
         </button>
     </div>
-        <ul class="nav-buttons-list">
-            <% if current_user %>
-                <!-- <%= button_to "DOAR", new_donation_path, form_class: "form-button", :class => "logged donation-button", :method => :get%> -->
-                <%= link_to 'Log Out', logout_path, :class => "nav-buttons" %>
-                <span id="teste">
-                    <i class="material-icons md-36 profile-icon">account_circle</i>
-                </span>
-            <% else %>
-                <%= link_to "Sign Up", signup_path, :class => "nav-buttons sing-up" %>
-                <span class="separate">&nbsp</span>
-                <%= link_to "Log in", login_path, :class => "nav-buttons sing-up" %>
-            <% end %>
-        </ul>
+    <ul class="nav-buttons-list">
+        <% if current_user %>
+            <%= link_to 'Log Out', logout_path, :class => "nav-buttons" %>
+            <span id="teste">
+                <i class="material-icons md-36 profile-icon">account_circle</i>
+            </span>
+        <% else %>
+            <%= link_to "Sign Up", signup_path, :class => "nav-buttons sing-up" %>
+            <span class="separate">&nbsp</span>
+            <%= link_to "Log in", login_path, :class => "nav-buttons sing-up" %>
+        <% end %>
+    </ul>
 </nav>
 

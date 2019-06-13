@@ -135,6 +135,10 @@ nav {
     background-color: var(--main-white);
 }
 
+.profile-hyperlink:hover {
+    background-color: transparent;
+}
+
 .nav-search {
     font-family: 'Montserrat', sans-serif;
     height: 40px;

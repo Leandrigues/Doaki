@@ -1,15 +1,16 @@
+<%= render partial: "shared/nav" %>
 <p id=”alert”><%= alert %></p>
-<h1>Login</h1>
-<%= form_tag sessions_path do |form| %>
-  <div class=”field”>
+<%= form_tag sessions_path, :class => "login-form" do |form| %>
+  <h1 class="login-form-title-user">Login</h1>
+  <div class=label”>
     <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
-  <div class=”field”>
+  <div class=label”>
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class=”actions”>
+  <div class=”submit-label”>
     <%= submit_tag 'Login' %>
   </div>
 <% end %>

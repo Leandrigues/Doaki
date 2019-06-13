@@ -1,10 +1,9 @@
-<style>
-
-</style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <%= form_with(model: donation, local: true, class: "form") do |form| %>
+
+  <h1 class="form-title">Crie sua Doação</h1>
+
   <% if donation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(donation.errors.count, "error") %> Erro ao criar doação </h2>
@@ -56,7 +55,6 @@
   </div>
 
   <div class="label">
-
     <%= form.label :email, :class => "label-text" %>
     <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado  : user@email.com(.br)" %>
   </div>
@@ -66,8 +64,8 @@
     <%= form.text_area :description, :class => "input-field input-description", :placeholder => "Obrigatorio" %>
   </div>
 
-  <div class="label submit-label">
-      <button class="submit-button">
+  <div class="submit-label">
+    <button class="submit-button">
       <i class="material-icons">
         done
       </i>

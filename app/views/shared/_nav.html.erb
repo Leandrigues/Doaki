@@ -6,7 +6,7 @@
 
 </head>
 <nav>
-    <div>
+    <div class="nav-logo">
         <%= link_to "Doaki", root_path, :class => "logo" %>
     </div>
     <div class="nav-search-bar">
@@ -17,8 +17,11 @@
     </div>
     <ul class="nav-buttons-list">
         <% if current_user %>
+            <%= link_to 'DOAR',  new_donation_path, :class => "nav-buttons" %>
+            <span class="separate">&nbsp</span>
             <%= link_to 'Log Out', logout_path, :class => "nav-buttons" %>
-            <span id="teste">
+            <span class="separate">&nbsp</span>
+            <span class="profile-span">
                 <i class="material-icons md-36 profile-icon">account_circle</i>
             </span>
         <% else %>

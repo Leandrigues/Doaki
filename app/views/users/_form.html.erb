@@ -1,5 +1,5 @@
-<%= form_with(model: user, local: true, class: "form form-users") do |form| %>
-  <h1 class="form-title form-title-user">Crie sua conta</h1>
+<%= form_with(model: user, local: true, class: "form") do |form| %>
+  <h1 class="form-title">Crie sua conta</h1>
 
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -13,23 +13,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="label">
     <%= form.label :email, :class => "label-text" %>
     <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
-  <div class="field">
+  <div class="label">
     <%= form.label :password, :class => "label-text" %>
     <%= form.password_field :password, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
-  <div class="field">
+  <div class="label">
     <%= form.label :password_confirmation, :class => "label-text" %>
     <%= form.password_field :password_confirmation, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
-  <div class="label submit-label">
-      <button class="submit-button">
+  <div class="submit-label">
+    <button class="submit-button">
       <i class="material-icons">
         done
       </i>

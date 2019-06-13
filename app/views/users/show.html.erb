@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= render partial: "/shared/nav" %>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<!-- <p id="notice"><%= notice %></p> -->
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="user-show-container shadow">
+	<i class="material-icons icon">person</i>
+	<span class="user-show-title">Suas informações</span>
+	<div class="information">
+		<span>Email:</span>
+		<span><%= @user.email %></span>
+	</div>
+	<%= link_to 'Editar informações', edit_user_path(@user), class: "edit-user-button" %>
+</div>

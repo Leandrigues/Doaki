@@ -5,7 +5,7 @@
 }
 
 .login-form {
-	max-width: 500px;
+	max-width: 20rem;
     font-family: 'Montserrat', sans-serif;
     padding: 1rem;
     border-radius: 3.5px;
@@ -15,35 +15,33 @@
 	margin-top: 2rem;
     display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	-webkit-box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
     -moz-box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
     box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
 }
 
-.login-form-title-user {
+.title-user {
 	text-align: center;
 	color: var(--main-color);
 	font-size: 2rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
-.label {
+.login-label {
 	display: flex;
 	flex-direction: column;
-	margin: 0 0 15px 0;
 }
 
-.label-text {
+.login-label-text {
 	font-weight: bold;
 	padding-top: 8px;
 	padding-right: 5px;
 }
 
-.input-field {
+.login-input-field {
 	font-family: 'Montserrat', sans-serif;
 	width: 100%;
-	max-width: 100%;
-	min-width: 100%;
 	box-sizing: border-box;
 	border: 1px solid #C2C2C2;
 	border-radius: 3px;
@@ -52,38 +50,26 @@
 	border-top-style: none;
 	border-left-style: none;
 	border-right-style: none;
-	height: 37px;
+	height: 2.2rem;
 }
 
-.submit-label {
+.login-button-label {
 	display: flex;
 	justify-content: center;
+	margin-top: 1rem;
 	width: 100%;
 }
 
-.div-back-button {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.link-back {
-	padding-top: 3px;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 20px;
-	background-color: #1D84B5;
-	text-decoration: none;
-	color: #F6F6FF;
+.login-button {
+	width: 5rem;
 	font-size: 18px;
-	width: 25%	;
-	height: 30px;
-}
-
-.link-back:hover {
-	background-color: #34699a;
+	font-family: 'Montserrat', sans-serif;
+	border: none;
+	padding: 0.3rem 0 0.3rem 0;
+	background: var(--main-color);
+	color: var(--main-background-color);
+	border-radius: 20px;
+	-webkit-box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
+    box-shadow: 0px 7px 62px -16px rgba(0,0,0,0.68);
 }

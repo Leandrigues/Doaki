@@ -1,16 +1,16 @@
 <%= render partial: "shared/nav" %>
-<p id=”alert”><%= alert %></p>
+<p class=”alert”><%= alert %></p>
 <%= form_tag sessions_path, :class => "login-form" do |form| %>
-  <h1 class="login-form-title-user">Login</h1>
-  <div class=label”>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+  <h1 class="title-user">Login</h1>
+  <div class=login-label”>
+    <%= label_tag :email, "Usuario", class: "login-label-text" %>
+    <%= text_field_tag :email, nil, class: "login-input-field" %>
   </div>
-  <div class=label”>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+  <div class=login-label”>
+    <%= label_tag :password, "Senha", class: "login-label-text" %>
+    <%= password_field_tag :password, nil, class: "login-input-field" %>
   </div>
-  <div class=”submit-label”>
-    <%= submit_tag 'Login' %>
+  <div class="login-button-label">
+    <%= submit_tag 'Login', class: "login-button" %>
   </div>
 <% end %>

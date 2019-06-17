@@ -26,7 +26,7 @@ class DonationsController < ApplicationController
   # POST /donations.json
   def create
     @donation = Donation.new(donation_params)
-
+    @donation.user = current_user if current_user
     respond_to do |format|
       if @donation.save
         format.html { redirect_to @donation, notice: 'Donation was successfully created.' }

@@ -2,7 +2,8 @@
 
 <h1 class="edit-title">Editing Donation</h1>
 
-<%= render 'form', donation: @donation %>
-
-<%= link_to 'Show', @donation %> |
-<%= link_to 'Back', donations_path %>
+<% if current_user && @donation.user.id == current_user.id %>
+	<%= render 'form', donation: @donation %>
+	<%= link_to 'Show', @donation %> |
+	<%= link_to 'Back', donations_path %>
+<% end %>

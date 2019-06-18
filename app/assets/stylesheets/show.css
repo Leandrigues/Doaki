@@ -27,15 +27,12 @@
     margin-left: 2rem;
     border-collapse: collapse;
     align-items: stretch;
-    flex
 
 }
 
 .photo-container {
     background-color: var(--container-background);
-    padding-top: 3rem;
     flex-grow: 1;
-    padding-bottom: 2rem;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -49,20 +46,21 @@
     overflow-x: auto;
 }
 
+
 .photo {
     -webkit-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
-    margin: 0 0 1rem 1rem;
+    margin: 1rem;
     border-radius: 1.1rem;
     flex-grow: 1;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    width: 34rem;
-    /* height: 30rem; */
-    /* height: 30%; */
+    width: 90%;
+    height: 80%;
+
 }
 
 .container-infos {
@@ -96,12 +94,6 @@
 
 .description {
     line-height: 1.3rem;
-}
-
-/* Donation-User */
-
-p {
-    margin: 0;
 }
 
 .user-show-container {

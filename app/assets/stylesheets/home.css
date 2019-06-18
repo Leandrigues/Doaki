@@ -3,8 +3,18 @@
   --main-white: #F6F6FF;
 }
 
+.donation-description {
+	height: 100%;
+	overflow-y: auto;
+	text-overflow: ellipsis;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	overflow: auto;
+	word-wrap: break-word;
+}
 .donation-text {
-	max-height: 70%;
+	height: 70%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -14,7 +24,7 @@
 .donation-title {
 	margin-top: 0.7rem;
 	margin-bottom: 0.7rem;
-	height: 10%;
+	height: 30%;
 	text-align: center;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -66,13 +76,5 @@
 }
 
 
-.donation-text p {
-	margin-top: 0;
-	margin-bottom: 0;
-	width: 100%;
-	height: 90%;
-	overflow: auto;
-	text-overflow: ellipsis;
-	word-wrap: break-word;
-}
+
 

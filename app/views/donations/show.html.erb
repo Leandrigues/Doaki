@@ -8,7 +8,11 @@
       <% (0...@donation.images.count).each do |index| %>
       <%= image_tag(@donation.images[index], :class => "photo") %>
       <% end %>
+    <% else %> 
+    <%= image_tag("picture.png", :class =>"no-image") %>
+
     <% end %>
+
   </div>
   </span>
   <div class="container-infos">

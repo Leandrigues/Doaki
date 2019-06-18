@@ -1,5 +1,5 @@
 <%= form_with(model: user, local: true, class: "form") do |form| %>
-  <h1 class="form-title">Crie sua conta</h1>
+   <h1 class="form-title"><%= @formTitle %></h1>
 
   <% if user.errors.any? %>
     <div id="error_explanation">

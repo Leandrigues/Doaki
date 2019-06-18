@@ -16,10 +16,12 @@ class DonationsController < ApplicationController
   # GET /donations/new
   def new
     @donation = Donation.new
+    @formTitle = "Crie sua Doação"
   end
 
   # GET /donations/1/edit
   def edit
+    @formTitle = "Edite sua Doação"
   end
 
   # POST /donations

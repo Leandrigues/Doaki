@@ -15,10 +15,12 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @formTitle = "Crie sua conta"
   end
 
   # GET /users/1/edit
   def edit
+    @formTitle = "Edite seu cadastro"
   end
 
   # POST /users

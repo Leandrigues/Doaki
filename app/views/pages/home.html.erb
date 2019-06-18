@@ -7,7 +7,7 @@
 	        <% if donation.images.attached? %>
 	            <%= image_tag(donation.images[0], :class => "donation-image") %>
 	        <% else %>
-	          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "donation-no-image") %>
+	          <%= image_tag("picture", :class => "donation-no-image") %>
 	        <% end%>
       	</div>
         <div class="donation-text">

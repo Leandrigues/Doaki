@@ -12,6 +12,7 @@
 	width: 100%;
 	overflow: auto;
 	word-wrap: break-word;
+	color: black;
 }
 .donation-text {
 	height: 70%;
@@ -29,6 +30,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	color: black;
 }
 
 .donation-list {
@@ -77,3 +79,4 @@
 .donation-no-image {
 	height: 100%;
 }
+

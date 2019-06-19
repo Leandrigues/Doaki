@@ -16,18 +16,22 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @formTitle = "Crie sua conta"
+    @userPw = "Senha"
+    @userPwConfirmation = "Confirme sua senha"
   end
 
   # GET /users/1/edit
   def edit
     @formTitle = "Edite seu cadastro"
+    @userPw = "Nova senha"
+    @userPwConfirmation = "Confirme sua nova senha"
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    # @user.donations.build(params[:donations])
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

@@ -2,12 +2,20 @@
 
 <!-- <p id="notice"><%= notice %></p> -->
 
-<div class="user-show-container shadow">
+<div class="user-show-container">
 	<i class="material-icons icon">person</i>
 	<span class="user-show-title">Suas informações</span>
 	<div class="information">
-		<span>Email:</span>
-		<span><%= @user.email %></span>
+		<span>Email: <%= @user.email %></span>
 	</div>
 	<%= link_to 'Editar informações', edit_user_path(@user), class: "edit-user-button" %>
+	<span class="user-show-title">Suas doações</span>
+</div>
+<div class="user-donations">
+	<% if current_user %>
+		<% current_user.donations.each do |donation| %>
+			<span><%= donation.title %></span><br>
+			<span><%= donation.description %></span>
+		<% end %>
+	<% end %>
 </div>

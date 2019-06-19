@@ -1,6 +1,8 @@
 :root {
     --container-background: rgb(255, 255, 255);
     --border-radius-container: 0.3rem;
+    --main-background-color: #F6F6FF;
+    --main-hover-color: #34699a;
     --main-color: #1D84B5;
 }
 
@@ -96,14 +98,15 @@
     line-height: 1.3rem;
 }
 
+/* User - Show */
+
 .user-show-container {
     width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 0.15rem solid var(--main-color);
-    margin: 2rem auto 2rem auto;
+    margin: 0.5rem auto 0 auto;
     border-radius: var(--border-radius-container);
     font-family: 'Montserrat', sans-serif;
 }
@@ -116,28 +119,109 @@
 .user-show-title {
     color: var(--main-color);
     font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 .information {
     width: 75%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 1rem;
     margin-top: 1rem;
 }
 
 .edit-user-button {
+    font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border: 0.1rem solid var(--main-color);
-    padding: 0.5rem;
-    border-radius: 1rem;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
     text-decoration: none;
+<<<<<<< HEAD
 }
 
 .edit-user-button:hover {
+    color: var(--main-background-color)!important; /* ?????? */
     background-color: var(--main-color);
-    border: 0.1rem solid var(--main-color);
+}
+
+.edit-user-button:hover {
+    background: var(--main-hover-color);
+    cursor: pointer;
+}
+
+.user-donations {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.user-donation {
+    width: 20rem;
+    height: 23rem;
+    padding: 1rem;
+    margin: 1em;
+    border: solid 0.1rem var(--main-color);
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.user-donation:hover {
+    background-color: #d9d9df;
+}
+
+.us-don-image-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.us-don-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.us-don-no-image {
+    height: 100%;
+}
+
+.us-don-text {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.us-don-title {
+    margin: 0.2rem 0 0.2rem 0;
+    height: 13%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.us-don-description {
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    word-wrap: break-word;
+    height: 73%;
+}
+
+.us-don-description p {
+    margin: 0;
+>>>>>>> be84811f25f27eb426f38c6e965925a17dac9231
 }

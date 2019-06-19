@@ -28,6 +28,10 @@ class DonationsController < ApplicationController
   # POST /donations.json
   def create
     @donation = Donation.new(donation_params)
+    if current_user
+      @donation.user = current_user
+      current_user.donations << @donation
+    end
     @donation.user = current_user if current_user
     respond_to do |format|
       if @donation.save

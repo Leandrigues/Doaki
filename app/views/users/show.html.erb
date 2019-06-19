@@ -7,6 +7,7 @@
 		<span>Email: <%= @user.email %></span>
 	</div>
 	<%= link_to 'Editar', edit_user_path(@user), class: "edit-user-button" %>
+	<div id="separate-infos">&nbsp</div>	
 	<span class="user-show-title margin-bottom-title">Suas doações</span>
 </div>
 <div class="user-donations">
@@ -15,21 +16,23 @@
 			<span class="no-donations-msg">Não há doações feitas por você...</span>
 		<% else %>
 			<% current_user.donations.each do |donation| %>
-				<div class="user-donation" data-id ="<%=donation.id%>">
-					<div class="us-don-image-container">
-				        <% if donation.images.attached? %>
-				            <%= image_tag(donation.images[0], :class => "us-don-image") %>
-				        <% else %>
-				          <%= image_tag("picture", :class => "us-don-no-image") %>
-				        <% end%>
-			      	</div>
-			        <div class="us-don-text">
-				        <h1 class = "us-don-title"><%= donation.title %></h2>
-				        <div class="us-don-description">
-				            <p><%= donation.description %></p>
-				        </div>
-			        </div>
-				</div>
+				<%= link_to donation_path(donation), :class => "donation-link" do %>
+					<div class="user-donation" data-id ="<%=donation.id%>">
+						<div class="us-don-image-container">
+					        <% if donation.images.attached? %>
+					            <%= image_tag(donation.images[0], :class => "us-don-image") %>
+					        <% else %>
+					          <%= image_tag("picture", :class => "us-don-no-image") %>
+					        <% end%> 
+			    	  	</div>
+			    	    <div class="us-don-text">
+					        <h1 class = "us-don-title"><%= donation.title %></h2>
+					        <div class="us-don-description">
+					            <p class="us-don-description-paragraph"><%= donation.description %></p>
+					        </div>
+			        	</div>
+					</div>
+				<% end %>
 			<% end %>
 		<% end %>
 	<% end %>

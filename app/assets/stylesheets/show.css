@@ -133,21 +133,21 @@
 .edit-user-button {
     font-size: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     padding: 0.6rem;
     border-radius: 0.3rem;
     text-decoration: none;
-<<<<<<< HEAD
 }
 
 .edit-user-button:hover {
-    color: var(--main-background-color)!important; /* ?????? */
-    background-color: var(--main-color);
+    background-color: transparent;
+    color: black;
 }
 
-.edit-user-button:hover {
-    background: var(--main-hover-color);
-    cursor: pointer;
+#separate-infos {
+    border-bottom: solid 1px rgb(161, 161, 161);
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 .user-donations {
@@ -162,11 +162,13 @@
 }
 
 .user-donation {
-    width: 20rem;
+    /* width: 20rem; */
+    width: 18rem;
     height: 23rem;
     padding: 1rem;
     margin: 1em;
-    border: solid 0.1rem var(--main-color);
+    /* border: solid 0.1rem var(--main-color); */
+    background-color: white;
     border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
@@ -223,5 +225,13 @@
 
 .us-don-description p {
     margin: 0;
->>>>>>> be84811f25f27eb426f38c6e965925a17dac9231
+}
+
+.us-don-text, .us-don-description-paragraph {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
 }

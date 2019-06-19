@@ -43,11 +43,13 @@
 }
 
 .donation-each {
-	width: 20rem;
+	width: 18rem;
+	/* width: 20rem; */
 	height: 23rem;
 	padding: 1rem;
 	margin: 1em;
-	border: solid 0.1rem var(--main-color);
+	/* border: solid 0.1rem var(--main-color); */
+	background-color: white;
 	border-radius: 0.3rem;
 	display: flex;
 	flex-direction: column;
@@ -55,7 +57,7 @@
 }
 
 .donation-each:hover {
-	background-color: #d9d9df;
+	background-color: #e4e4e4;
 }
 
 .donation-image-container {
@@ -74,8 +76,4 @@
 
 .donation-no-image {
 	height: 100%;
-}
-
-.form-title-signup {
-	color: rgb(71, 71, 71);
 }

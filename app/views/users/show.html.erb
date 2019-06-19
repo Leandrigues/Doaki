@@ -17,7 +17,7 @@
 		<% else %>
 			<% current_user.donations.each do |donation| %>
 				<%= link_to donation_path(donation), :class => "donation-link" do %>
-					<div class="user-donation" data-id ="<%=donation.id%>">
+					<div class="user-donation">
 						<div class="us-don-image-container">
 					        <% if donation.images.attached? %>
 					            <%= image_tag(donation.images[0], :class => "us-don-image") %>
@@ -36,5 +36,4 @@
 			<% end %>
 		<% end %>
 	<% end %>
-	<%= javascript_include_tag('index.js') %>
 </div>

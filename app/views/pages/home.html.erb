@@ -2,7 +2,7 @@
 
 <div class="donation-list">
     <% @donations.each do |donation| %>
-      <div class="donation-each" data-id ="<%=donation.id%>">
+      <%= link_to donation_path(donation), :class => "donation-each" do %>
       	<div class="donation-image-container">
 	        <% if donation.images.attached? %>
 	            <%= image_tag(donation.images[0], :class => "donation-image") %>
@@ -16,7 +16,7 @@
             <p><%= donation.description %></p>
           </div>
         </div>
-      </div>
+        <%end%>
     <% end %>
     <%= javascript_include_tag('index.js') %>
 </div>

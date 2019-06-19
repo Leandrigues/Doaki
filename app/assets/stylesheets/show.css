@@ -136,3 +136,8 @@
     border-radius: 1rem;
     text-decoration: none;
 }
+
+.edit-user-button:hover {
+    background-color: var(--main-color);
+    border: 0.1rem solid var(--main-color);
+}

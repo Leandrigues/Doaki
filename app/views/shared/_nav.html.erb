@@ -19,7 +19,7 @@
         <% if current_user %>
             <%= link_to 'DOAR',  new_donation_path, :class => "nav-buttons" %>
             <span class="separate">&nbsp</span>
-            <%= link_to 'Log Out', logout_path, :class => "nav-buttons" %>
+            <%= link_to 'Sair', logout_path, :class => "nav-buttons" %>
             <span class="separate">&nbsp</span>
             <span class="profile-span">
                 <%= link_to user_path(current_user.id), :class => "profile-hyperlink" do %>
@@ -27,7 +27,7 @@
                 <% end %>
             </span>
         <% else %>
-            <%= link_to "Sign Up", signup_path, :class => "nav-buttons sing-up" %>
+            <%= link_to "Cadastrar", signup_path, :class => "nav-buttons sing-up" %>
             <span class="separate">&nbsp</span>
             <%= link_to "Login", login_path, :class => "nav-buttons sing-up" %>
         <% end %>

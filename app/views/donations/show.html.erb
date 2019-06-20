@@ -9,17 +9,13 @@
       <%= image_tag(@donation.images[index], :class => "photo") %>
       <% end %>
     <% else %> 
-    <%= image_tag("picture.png", :class =>"no-image") %>
-
+      <%= image_tag("picture.png", :class =>"no-image") %>
     <% end %>
-
   </div>
-  </span>
   <div class="container-infos">
     <p class="title-donation">
       <%= @donation.title %>
     </p>
-
 
     <p class="infos-donation">
       <%= @donation.street %>
@@ -27,17 +23,15 @@
 
     <%# <span class="personal-infos"> %>
 
-      <p class="infos-donation">
-        <%= @donation.phone %>, 
-        <%= @donation.email %>
-      </p>
+    <p class="infos-donation">
+      <%= @donation.phone %>, 
+      <%= @donation.email %>
+    </p>
     <%# </span> %>
-
 
     <p class="description">
       <%= @donation.description %>
     </p>
   </div>
-    
 </div>
 

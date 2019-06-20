@@ -29,10 +29,10 @@ class DonationsController < ApplicationController
   def create
     @donation = Donation.new(donation_params)
     if current_user
+      @donation.email = current_user.email
       @donation.user = current_user
       current_user.donations << @donation
     end
-    @donation.user = current_user if current_user
     respond_to do |format|
       if @donation.save
         format.html { redirect_to @donation, notice: 'Donation was successfully created.' }

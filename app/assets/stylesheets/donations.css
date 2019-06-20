@@ -1,0 +1,104 @@
+:root {
+  --main-color: #1D84B5;
+  --main-hover-color: #34699a;
+  --main-background-color: #F6F6FF;
+}
+
+.donations-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+	color: var(--main-color);
+	font-size: 3.5rem;
+	margin: 1rem 0 1rem 0;
+}
+
+.don-button {
+	text-decoration: none;
+	background-color: var(--main-color);	
+	color: var(--main-background-color);
+	font-size: 1.4rem;
+	border-radius: 1.5rem;
+	width: 6.5rem;
+	margin: 0 auto 1rem auto;
+	padding: 0.4rem;
+}
+
+.don-button:hover {
+	background-color: var(--main-hover-color);
+}
+
+.donations {
+	margin: 0 0 1rem 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.donation {
+	width: 18rem;
+	height: 23rem;
+	padding: 1rem;
+	background-color: white;
+	border-radius: 0.3rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.donation:hover {
+	background-color: #e4e4e4;
+}
+
+.donation-image-cont {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.image {
+	height: 100%;
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.no-image {
+	height: 100%;
+}
+
+.donation-about {
+	height: 70%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.donation-about h2 {
+	margin: 0.4rem 0 0.4rem 0;
+	height: 13%;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: black;
+	font-size: 1.4rem;
+}
+
+.donation-about p {
+	height: 70%;
+	overflow-y: auto;
+	width: 100%;
+	word-wrap: break-word;
+	color: black;
+	margin: 0;
+}

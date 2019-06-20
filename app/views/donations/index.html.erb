@@ -1,28 +1,23 @@
 <%= render partial: "shared/nav" %>
 <!-- <p id="notice"><%= notice %></p> -->
-<header class="donation-header donation-flex-row-wrap">
-  <h1 class="title donation-flex-row-wrap">Donations</h1>
-  <h1><%= link_to 'New Donation', new_donation_path %></h1>
+<header class="donations-header">
+  <h1 class="title">Doações</h1>
+  <%= link_to 'Doe', new_donation_path, class: "don-button" %>
 </header>
 
-<div class="donations donation-flex-column-nowrap">
+<div class="donations">
     <% @donations.each do |donation| %>
-      <div class="donation donation-flex-row-wrap">
-        <% if donation.images.attached? %>
-          <%= image_tag(donation.images[0], :style => "width: 300px") %>
-        <% else %>
-          <div>
-          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :style => "width: 300px") %>
-          </div>
-        <% end%>
-        <div class="donation-about donation-flex-column-nowrap">
+      <div class="donation">
+        <div class="donation-image-cont">
+          <% if donation.images.attached? %>
+            <%= image_tag(donation.images[0], :class => "image") %>
+          <% else %>
+          <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "no-image") %>
+          <% end %>
+        </div>
+        <div class="donation-about">
           <h2><%= donation.title%></h2>
           <p><%=donation.description%></p>
-          <div class ="donation-options donation-flex-row-wrap">
-            <%= link_to 'Show', donation %>
-            <%= link_to 'Edit', edit_donation_path(donation) %>
-            <%= link_to 'Destroy', donation, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
         </div>
       </div>
     <% end %>

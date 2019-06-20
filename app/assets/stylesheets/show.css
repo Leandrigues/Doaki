@@ -40,6 +40,12 @@
     padding: 1.5rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    height: 27rem;  
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: auto;
+
 }
 
 .photo {

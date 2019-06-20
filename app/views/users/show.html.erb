@@ -16,23 +16,29 @@
 			<span class="no-donations-msg">Não há doações feitas por você...</span>
 		<% else %>
 			<% current_user.donations.each do |donation| %>
-				<%= link_to donation_path(donation), :class => "donation-link" do %>
-					<div class="user-donation">
-						<div class="us-don-image-container">
-					        <% if donation.images.attached? %>
-					            <%= image_tag(donation.images[0], :class => "us-don-image") %>
-					        <% else %>
-					          <%= image_tag("picture", :class => "us-don-no-image") %>
-					        <% end%> 
-			    	  	</div>
-			    	    <div class="us-don-text">
-					        <h1 class = "us-don-title"><%= donation.title %></h2>
-					        <div class="us-don-description">
-					            <p class="us-don-description-paragraph"><%= donation.description %></p>
-					        </div>
-			        	</div>
-					</div>
-				<% end %>
+				<div class="user-donation-container">
+					<%= link_to donation_path(donation), :class => "donation-link" do %>
+						<div class="user-donation">
+							<div class="us-don-image-container">
+						        <% if donation.images.attached? %>
+						            <%= image_tag(donation.images[0], :class => "us-don-image") %>
+						        <% else %>
+						          <%= image_tag("picture", :class => "us-don-no-image") %>
+						        <% end%> 
+				    	  	</div>
+				    	    <div class="us-don-text">
+						        <h1 class = "us-don-title"><%= donation.title %></h2>
+						        <div class="us-don-description">
+						            <p class="us-don-description-paragraph"><%= donation.description %></p>
+						        </div>
+				        	</div>
+						</div>
+					<% end %>
+		        	<div class="us-don-options">
+		        		<%= link_to 'Editar', edit_donation_path(donation), class: "us-don-button button-edit" %>
+						<%= link_to 'Deletar', donation, method: :delete, data: { confirm: 'Are you sure?' }, class: "us-don-button button-delete" %>
+		        	</div>
+				</div>
 			<% end %>
 		<% end %>
 	<% end %>

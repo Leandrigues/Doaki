@@ -21,17 +21,32 @@
       <%= @donation.street %>
     </p>
 
-    <%# <span class="personal-infos"> %>
-
     <p class="infos-donation">
       <%= @donation.phone %>, 
       <%= @donation.email %>
     </p>
-    <%# </span> %>
 
     <p class="description">
       <%= @donation.description %>
     </p>
   </div>
 </div>
-
+<div class="comments-container">
+  <h2 class="comments-title">Comentários</h2>
+  <div class="create-comment">
+    <%= render partial: 'comments/form', locals: { comment: @comment }, :class => "comment-input" %>
+  </div>
+  <div class="all-coments">
+    <% @comments.each do |comment| %>
+      <% comment.donation = @donation %>
+      <div class="comments">
+        <p class="user-name-comment"><%= comment.user.name %></p>
+        <span class="separate-name-body">&nbsp</span>
+        <div class="comment-body">
+          <p><%= comment.body %></p>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>

@@ -12,6 +12,8 @@ class DonationsController < ApplicationController
   # GET /donations/1.json
   def show
     @donation = Donation.find(params[:id])
+    @comments = @donation.comments.all
+    @comment = @donation.comments.build
   end
 
   # GET /donations/new

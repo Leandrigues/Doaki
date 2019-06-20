@@ -11,6 +11,14 @@ class Donation < ApplicationRecord
   validate :image_type
 
   private
+  def self.search(search)
+    if search
+      where(["title LIKE ?", "%#{search}%"])
+    else
+      all
+    end
+  end
+
   def image_type
     if images.attached?
       images.each do |image|

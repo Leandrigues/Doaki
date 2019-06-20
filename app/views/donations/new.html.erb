@@ -4,10 +4,10 @@
 	<%= render 'form', donation: @donation %>
 <% else %>
 	<div class="not-logged-cont">
-		<h1 class="not-logged-msg">Faca seu login primeiro</h1>
+		<h1 class="not-logged-msg">Faça seu login primeiro!</h1>
 		<div class="not-logged-buttons">
-			<%= link_to "Sign Up", signup_path, :class => "not-logged-signin" %>
-			<%= link_to "Login", login_path, :class => "not-logged-login" %>
+			<%= link_to "Sign Up", signup_path, :class => "not-logged-button" %>
+			<%= link_to "Login", login_path, :class => "not-logged-button" %>
 		</div>
 	</div>
 <% end %>

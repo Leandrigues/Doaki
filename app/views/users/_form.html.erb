@@ -14,17 +14,22 @@
   <% end %>
 
   <div class="label">
+    <%= form.label "Nome", :class => "label-text" %>
+    <%= form.text_field :name, :class => "input-field", :placeholder => "Obrigatorio"  %>
+  </div>
+
+  <div class="label">
     <%= form.label :email, :class => "label-text" %>
     <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
   <div class="label">
-    <%= form.label @userPw, :class => "label-text" %>
+    <%= form.label "Senha", :class => "label-text" %>
     <%= form.password_field :password, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
   <div class="label">
-    <%= form.label @userPwConfirmation, :class => "label-text" %>
+    <%= form.label "Confirmação de senha", :class => "label-text" %>
     <%= form.password_field :password_confirmation, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 

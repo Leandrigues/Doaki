@@ -133,19 +133,19 @@
 .edit-user-button {
     font-size: 1rem;
     margin-top: 1rem;
-    /* margin-bottom: 1rem; */
     padding: 0.6rem;
     border-radius: 0.3rem;
     text-decoration: none;
+    background-color: var(--main-color);
+    color: var(--main-background-color);
 }
 
 .edit-user-button:hover {
-    background-color: transparent;
-    color: black;
+    background-color: var(--main-hover-color);
 }
 
 #separate-infos {
-    border-bottom: solid 1px rgb(161, 161, 161);
+    border-bottom: solid 0.08rem rgb(161, 161, 161);
     margin-bottom: 1rem;
     width: 100%;
 }
@@ -162,12 +162,10 @@
 }
 
 .user-donation {
-    /* width: 20rem; */
     width: 18rem;
     height: 23rem;
     padding: 1rem;
     margin: 1em;
-    /* border: solid 0.1rem var(--main-color); */
     background-color: white;
     border-radius: 0.3rem;
     display: flex;
@@ -201,26 +199,24 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .us-don-title {
-    margin: 0.2rem 0 0.2rem 0;
+    margin: 0.4rem 0 0.4rem 0;
     height: 13%;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: black;
 }
 
 .us-don-description {
-    height: 100%;
+    height: 70%;
     overflow-y: auto;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
     width: 100%;
     word-wrap: break-word;
-    height: 73%;
+    color: black;
 }
 
 .us-don-description p {

@@ -3,36 +3,6 @@
   --main-white: #F6F6FF;
 }
 
-.donation-description {
-	height: 100%;
-	overflow-y: auto;
-	text-overflow: ellipsis;
-	margin-top: 0;
-	margin-bottom: 0;
-	width: 100%;
-	overflow: auto;
-	word-wrap: break-word;
-	color: black;
-}
-.donation-text {
-	height: 70%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.donation-title {
-	margin-top: 0.7rem;
-	margin-bottom: 0.7rem;
-	height: 30%;
-	text-align: center;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	color: black;
-}
-
 .donation-list {
 	width: 100%;
 	margin: 0;
@@ -42,15 +12,13 @@
 	font-family: 'Montserrat', sans-serif;
 	justify-content: space-around;
 	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .donation-each {
 	width: 18rem;
-	/* width: 20rem; */
 	height: 23rem;
 	padding: 1rem;
-	margin: 1em;
-	/* border: solid 0.1rem var(--main-color); */
 	background-color: white;
 	border-radius: 0.3rem;
 	display: flex;
@@ -63,9 +31,8 @@
 }
 
 .donation-image-container {
-	width: 90%;
-	margin: auto;
-	height: 55%;
+	width: 100%;
+	height: 50%;
 	display: flex;
 	justify-content: center;
 }
@@ -80,3 +47,31 @@
 	height: 100%;
 }
 
+.donation-text {
+	height: 70%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.donation-title {
+	margin: 0.4rem 0 0.4rem 0;
+	height: 13%;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: black;
+}
+
+.donation-description {
+	height: 70%;
+	overflow-y: auto;
+	width: 100%;
+	word-wrap: break-word;
+	color: black;
+}
+
+.donation-description p {
+	margin: 0;
+}

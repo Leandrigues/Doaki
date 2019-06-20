@@ -12,7 +12,7 @@
     box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
 }
 
-/* Donation-Show */
+/* PAGINA SHOW DAS DOACOES */
 .no-image {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -24,45 +24,38 @@
 
 .container {
     display: flex;
-    margin-top: 1rem;
+    margin: 2rem auto 2rem auto;
     width: 95%;
-    margin-left: 2rem;
     border-collapse: collapse;
     align-items: stretch;
-
 }
 
 .photo-container {
     background-color: var(--container-background);
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
     width: 50%;
+    flex-grow: 1;
     flex-wrap: wrap;
     border-right: solid 1px #EAEBED;
-    border-radius: var(--border-radius-container);
-    height: 27rem;  
+    border-radius: 0.3rem 0 0 0.3rem;
+    padding: 1.5rem;
     display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: auto;
+    justify-content: center;
 }
-
 
 .photo {
     -webkit-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
     box-shadow: 9px 13px 75px -11px rgba(0,0,0,0.75);
-    margin: 1rem;
     border-radius: 1.1rem;
-    flex-grow: 1;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    width: 90%;
-    height: 80%;
-
 }
 
 .container-infos {
@@ -73,7 +66,7 @@
     padding-left: 3.5rem;
     padding-top: 3rem;
     background-color: var(--container-background);
-    border-radius: var(--border-radius-container);
+    border-radius: 0 0.3rem 0.3rem 0;
     padding-right: 1.5rem;
     height: 27rem;  
     overflow: auto;
@@ -98,8 +91,7 @@
     line-height: 1.3rem;
 }
 
-/* User - Show */
-
+/* PAGINA SHOW DO USUARIO */
 .user-show-container {
     width: 25rem;
     display: flex;

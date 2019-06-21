@@ -14,17 +14,17 @@
   <% end %>
 
   <div class="label">
-    <%= form.label "Titulo da doação", :class => "label-text" %>
+    <%= form.label "Titulo", :class => "label-text" %>
     <%= form.text_field :title, :class => "input-field", :placeholder => "Obrigatorio" %>
   </div>
 
   <div class="label">
-    <%= form.label "Rua de entrega", :class => "label-text" %>
+    <%= form.label "Endereço", :class => "label-text" %>
     <%= form.text_field :street, :class => "input-field" %>
   </div>
 
   <div class="label">
-    <%= form.label "Fotos da doação", :class => "label-text" %>
+    <%= form.label "Fotos", :class => "label-text" %>
     <div class="file-label">
       <input type="text" name="file" id="file" class="input-file" placeholder="Para selecionar múltiplas imagens, utilize a tecla shift" 
       readonly="readonly">
@@ -38,17 +38,17 @@
   </div>
 
   <div class="label">
-    <%= form.label "Complemento da rua", :class => "label-text" %>
+    <%= form.label "Complemento", :class => "label-text" %>
     <%= form.text_field :detail, :class => "input-field" %>
   </div>
 
   <div class="label">
-    <%= form.label "CEP de entrega", :class => "label-text" %>
+    <%= form.label "CEP", :class => "label-text" %>
     <%= form.text_field :zip, :class => "input-field" , :placeholder => "Obrigatorio. Formato esperado: xxxxx-xxx"%>
   </div>
 
   <div class="label">
-    <%= form.label "Telefone para contato", :class => "label-text" %>
+    <%= form.label "Telefone", :class => "label-text" %>
     <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado: 11999999999 ou 11xxxxxxxx" %>
   </div>
 
@@ -58,7 +58,7 @@
   </div> -->
 
   <div class="label">
-    <%= form.label "Descrição da doação", :class => "label-text" %>
+    <%= form.label "Descrição", :class => "label-text" %>
     <%= form.text_area :description, :class => "input-field input-description", :placeholder => "Obrigatorio" %>
   </div>
 

@@ -115,26 +115,32 @@
     width: 95%;
     border-radius: 0.3rem;
     background-color: white;
-    margin-top: 0;
     padding: 1rem 1rem;
+}
+
+.comments-title {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #comment-body {
     width: 100rem;
-    display: none;
-    
+    display: none;   
 }
 
 textarea {
     width: 100%;
     height: 5rem;
     border-radius: 3px;
-    resize: none;
 }
 
 .create-comment {
-    width: 50%;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .comment-input {
@@ -142,18 +148,29 @@ textarea {
     flex-direction: column;
     align-items: flex-end;
 }
-.comments-title {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
+
+.comment-field {
+    margin-bottom: 0.5rem;
+}
+
+.comment-field textarea {
     font-family: 'Montserrat', sans-serif;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    height: 4rem;
+}
+
+.add-comment-field {
+    margin: 0;
 }
 
 .add-comment-button {
     color: white;
     background-color: var(--main-color);
+    font-family: 'Montserrat', sans-serif;
     border: none;
-    padding: 1rem;
+    padding: 0.6rem;
     border-radius: 3px;
 }
 
@@ -161,48 +178,44 @@ textarea {
     background-color: var(--main-hover-color);
 }
 
-.comments {
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(53, 53, 53);
-    border-radius: 5px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-    padding-top: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    width: 80%;
-}
-
-.all-coments {
+.all-comments {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.comment-body {
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 0;
-    color: rgb(255, 255, 255);
+.comment {
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 0.1rem solid rgb(71, 71, 71);
 }
 
 
 .user-name-comment {
     font-family: 'Montserrat', sans-serif;
-    margin-top: 0.2rem;
-    margin-left: 0.2rem;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: rgb(71, 71, 71);
     font-size: 1.5rem;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 
+.comment-body {
+    color: rgb( 71, 71, 71);
+    margin: 0 0 0.2rem 0;
+}
+
+.comment-body p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
 }
 
 .not-logged-comment-message {
     font-size: 1.3rem;
-    /*margin-bottom: 3rem;*/
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -221,8 +234,10 @@ textarea {
 }
 
 .icon {
-    color: rgb(51, 51, 51);
+    color: var(--main-color);
     font-size: 10rem!important;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .user-show-title {

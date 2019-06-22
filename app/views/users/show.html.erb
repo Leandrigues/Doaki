@@ -1,11 +1,11 @@
 <%= render partial: "/shared/nav" %>
 
 <div class="user-show-container">
-	<i class="material-icons icon">person</i>
+	<i class="material-icons icon">person_pin</i>
 	<span class="user-show-title">Suas informações</span>
 	<div class="information">
-		<div><strong>Nome: </strong> <%= @user.name %></div>
-		<div><strong>Email:                   </strong> <%= @user.email %></div>
+		<div><strong>Nome:</strong> <%= @user.name %></div>
+		<div><strong>Email:</strong> <%= @user.email %></div>
 	</div>
 	<%= link_to 'Editar', edit_user_path(@user), class: "edit-user-button" %>
 	<div id="separate-infos">&nbsp</div>	

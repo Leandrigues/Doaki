@@ -19,7 +19,7 @@
 
 .form-title {
 	text-align: center;
-	color: var(--main-color);
+	color: rgb(71, 71, 71);
 	font-size: 2rem;
 }
 
@@ -117,7 +117,7 @@ input[type='file'] {
 }
 
 .file-button {
-	height: 90%;
+	height: 2rem;
 	width: 15%;
 	font-size: 18px;
 	text-align: center;
@@ -133,6 +133,11 @@ input[type='file'] {
 .file-button:hover {
   	background-color: var(--main-hover-color);
   	cursor: pointer;
+}
+
+.file-button i {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .input-file {

@@ -82,6 +82,8 @@
 
 /* Estilo do formulario para signup */
 .form-title-signup {
+	text-align: center;
+	font-size: 2rem;
 	color: rgb(71, 71, 71);
 }
 

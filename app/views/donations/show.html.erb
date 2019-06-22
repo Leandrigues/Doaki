@@ -40,19 +40,11 @@
 </div>
 <div class="comments-container">
   <h2 class="comments-title">Comentários</h2>
-  <% if current_user %>
-    <div class="create-comment">
-      <%= render partial: 'comments/form', locals: { comment: @comment }, :class => "comment-input" %>
-    </div>
-  <% else %>
-    <p class="not-logged-comment-message">Você precisa estar logado para comentar.</p>
-  <% end %>
-  <div class="all-coments">
+  <div class="all-comments">
     <% @comments.each do |comment| %>
       <% comment.donation = @donation %>
-      <div class="comments">
+      <div class="comment">
         <p class="user-name-comment"><%= comment.user.name %></p>
-        <span class="separate-name-body">&nbsp</span>
         <div class="comment-body">
           <p><%= comment.body %></p>
         </div>
@@ -60,4 +52,11 @@
       <hr>
     <% end %>
   </div>
+  <% if current_user %>
+    <div class="create-comment">
+      <%= render partial: 'comments/form', locals: { comment: @comment }, :class => "comment-input" %>
+    </div>
+  <% else %>
+    <p class="not-logged-comment-message">Você precisa estar logado para comentar.</p>
+  <% end %>
 </div>

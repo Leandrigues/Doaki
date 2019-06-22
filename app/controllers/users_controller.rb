@@ -34,6 +34,7 @@ class UsersController < ApplicationController
     # @user.donations.build(params[:donations])
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'Conta criada com sucesso!' }
         format.json { render :show, status: :created, location: @user }
       else

@@ -4,8 +4,8 @@
 	<i class="material-icons icon">person</i>
 	<span class="user-show-title">Suas informações</span>
 	<div class="information">
-		<div>Nome: <%= @user.name %></div>
-		<div>Email: <%= @user.email %></div>
+		<div><strong>Nome: </strong> <%= @user.name %></div>
+		<div><strong>Email:                   </strong> <%= @user.email %></div>
 	</div>
 	<%= link_to 'Editar', edit_user_path(@user), class: "edit-user-button" %>
 	<div id="separate-infos">&nbsp</div>	

@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 20%;
+    width: 25%;
 }
 
 .nav-search-bar {
@@ -108,7 +108,7 @@ nav {
     justify-content: center;
     padding: 0;
     height: 100%;
-    width: 30%;
+    width: 25%;
     margin: 0;
 }
 
@@ -124,6 +124,7 @@ nav {
 }
 
 .profile-span {
+    margin-left: 0.8rem;
     border-radius: 50%;
     box-sizing: border-box;
     height: 36px;

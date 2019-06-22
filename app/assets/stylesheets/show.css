@@ -69,7 +69,7 @@
     display: flex;
     width: 50%;
     flex-direction: column;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding-left: 3.5rem;
     padding-top: 3rem;
     background-color: var(--container-background);
@@ -80,22 +80,31 @@
 }
 
 .title-donation {
-    font-size: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
     margin: 0;
     margin-bottom: 1rem;
     line-height: normal;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .infos-donation {
     margin: 0;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-    font-style: italic;
-    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.description-title {
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
 }
 
 .description {
+    margin-top: 0;
     line-height: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .comments-container {
@@ -124,16 +133,18 @@ textarea {
 
 .create-comment {
     width: 50%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .comment-input {
     display: flex;
     flex-direction: column;
-    align-items: flex-end
+    align-items: flex-end;
 }
 .comments-title {
     margin-top: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -190,11 +201,13 @@ textarea {
 
 .not-logged-comment-message {
     font-size: 1.3rem;
-    margin-bottom: 3rem;
-    font-style: italic;
+    /*margin-bottom: 3rem;*/
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* ------------------------------------------------------------------------- */
 /* PAGINA SHOW DO USUARIO */
+
 .user-show-container {
     width: 25rem;
     display: flex;
@@ -219,10 +232,15 @@ textarea {
 .information {
     width: 75%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     font-size: 1rem;
     margin-top: 1rem;
+}
+
+.information div {
+    text-align: center;
+    margin-bottom: 0.3rem;
 }
 
 .edit-user-button {

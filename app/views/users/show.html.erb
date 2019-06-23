@@ -14,7 +14,7 @@
 <div class="user-donations">
 	<% if current_user %>
 		<% if current_user.donations.length == 0 %>
-			<span class="no-donations-msg">Não há doações feitas por você...</span>
+			<p class="no-donations-user">Não há doações feitas por você...</p>
 		<% else %>
 			<% current_user.donations.each do |donation| %>
 				<div class="user-donation-container">

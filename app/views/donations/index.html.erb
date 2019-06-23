@@ -1,10 +1,13 @@
 <%= render partial: "shared/nav" %>
 
 <header class="donations-header">
-  <h1 class="title">Doações</h1>
+  <h1 class="title">Resultados</h1>
 </header>
 
 <div class="donations">
+  <% if @donations.length == 0 %>
+    <p class="no-donations-search">Não há resultados para sua pesquisa...</p>
+  <% else %>
     <% @donations.each do |donation| %>
       <%= link_to donation_path(donation), :class => "donation-each" do %>
           <div class="donation-image-cont">
@@ -20,4 +23,5 @@
           </div>
       <% end %>
     <% end %>
+  <% end %>
 </div>

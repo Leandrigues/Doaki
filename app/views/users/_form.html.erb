@@ -1,10 +1,9 @@
 <%= form_with(model: user, local: true, class: "form form-signup") do |form| %>
-  <h1 class="form-title-signup"><%= @formTitle %></h1>
+  <h1 class="form-title-signup">Perfil</h1>
 
   <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+      <h2><%= pluralize(user.errors.count, "erro") %> encontrado(s)</h2>
       <ul>
       <% user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,12 +13,12 @@
   <% end %>
 
   <div class="label">
-    <%= form.label :name, :class => "label-text" %>
+    <%= form.label "Nome", :class => "label-text" %>
     <%= form.text_field :name, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 
   <div class="label">
-    <%= form.label :email, :class => "label-text" %>
+    <%= form.label "Email", :class => "label-text" %>
     <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio"  %>
   </div>
 

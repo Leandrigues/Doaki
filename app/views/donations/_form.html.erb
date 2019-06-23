@@ -1,10 +1,10 @@
 <%= form_with(model: donation, local: true, class: "form") do |form| %>
 
-  <h1 class="form-title"><%= @formTitle %></h1>
+  <h1 class="form-title">Doação</h1>
 
   <% if donation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(donation.errors.count, "error") %> Erro ao criar doação </h2>
+      <h2><%= pluralize(donation.errors.count, "erro") %> ao criar doação </h2>
       <ul>
       <% donation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -51,11 +51,6 @@
     <%= form.label "Telefone", :class => "label-text" %>
     <%= form.text_field :phone, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado: 11999999999 ou 11xxxxxxxx" %>
   </div>
-
-  <!-- <div class="label">
-    <%= form.label :email, :class => "label-text" %>
-    <%= form.text_field :email, :class => "input-field", :placeholder => "Obrigatorio. Formato esperado: user@email.com(.br)" %>
-  </div> -->
 
   <div class="label">
     <%= form.label "Descrição", :class => "label-text" %>

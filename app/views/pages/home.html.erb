@@ -2,6 +2,9 @@
 
 <h1 class="home-title">Doações</h1>
 <div class="donation-list">
+  <% if @donations.length == 0 %>
+    <p class="no-donations-home">Ainda não há doações no site...</p>
+  <% else %>
     <% @donations.each do |donation| %>
       <%= link_to donation_path(donation), :class => "donation-each" do %>
       	<div class="donation-image-container">
@@ -19,6 +22,7 @@
         </div>
       <% end %>
     <% end %>
+  <% end %>
 </div>
 
 <h1 class="home-title">Como funciona o Doaki?</h1>

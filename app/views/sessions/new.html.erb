@@ -1,7 +1,9 @@
 <%= render partial: "shared/nav" %>
-<p class=”alert”><%= alert %></p>
+
+
 <%= form_tag sessions_path, :class => "login-form" do |form| %>
   <h1 class="title-user">Login</h1>
+  <p><%= alert %></p>
   <div class=login-label”>
     <%= label_tag :email, "Usuario", class: "login-label-text" %>
     <%= text_field_tag :email, nil, class: "login-input-field" %>

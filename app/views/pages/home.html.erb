@@ -1,5 +1,6 @@
 <%= render partial: "/shared/nav" %>
 
+<h1 class="home-title">Doações</h1>
 <div class="donation-list">
     <% @donations.each do |donation| %>
       <%= link_to donation_path(donation), :class => "donation-each" do %>
@@ -8,7 +9,7 @@
 	            <%= image_tag(donation.images[0], :class => "donation-image") %>
 	        <% else %>
 	          <%= image_tag("picture", :class => "donation-no-image") %>
-	        <% end%>
+	        <% end %>
       	</div>
         <div class="donation-text">
           <h1 class = "donation-title"><%= donation.title %></h2>
@@ -16,6 +17,16 @@
             <p><%= donation.description %></p>
           </div>
         </div>
-        <%end%>
+      <% end %>
     <% end %>
+</div>
+
+<h1 class="home-title">Como funciona o Doaki?</h1>
+<div class="home-info">
+  <h2>Para que serve a plataforma?</h2>
+  <p>No Doaki você pode se desfazer de algum bem que não deseja mais e que acha que teria melhor uso para outra pessoa, basta criar uma conta e registrar sua doação no site!</p>
+  <h2>Como consigo uma doação?</h2>
+  <p>Para obter alguma doação que você queira, deve entrar em contato com o dono através dos dados dele (telefone ou email), mostrados na página da doação, e combinar sobre o dia e horário de encontro no endereço de entrega, também registrado, ou algum outro modo de entrega da preferencia de vocês.</p>
+  <h2>O que fazer depois de entregar minha doação para alguém?</h2>
+  <p>Ao adicionar uma doação no Doaki todos os usuarios tem acesso a ela. Quando entregar sua doação a alguém, você deve entrar em seu perfil e deletar a sua doação nas opções!</p>
 </div>

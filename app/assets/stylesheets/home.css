@@ -1,11 +1,12 @@
 :root {
   --main-color: #1D84B5; 
   --main-white: #F6F6FF;
+  --main-letter-color: color: rgb(68, 68, 68);;
 }
 
 .home-title {
 	font-family: 'Montserrat', sans-serif;
-	color: rgb(68, 68, 68);
+	color: var(--main-letter-color);
 	text-align: center;
 	font-size: 3rem;
 	margin: 1rem 0 1rem 0;

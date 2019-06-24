@@ -12,13 +12,13 @@
       <%= link_to donation_path(donation), :class => "donation-each" do %>
           <div class="donation-image-cont">
             <% if donation.images.attached? %>
-              <%= image_tag(donation.images[0], :class => "image") %>
+              <%= image_tag(donation.images[0], :class => "donation-image") %>
             <% else %>
-            <%= image_tag("https://image.flaticon.com/icons/svg/149/149092.svg", :class => "no-image") %>
+            <%= image_tag('picture', :class => "donation-no-image") %>
             <% end %>
           </div>
           <div class="donation-about">
-            <h2><%= donation.title%></h2>
+            <h1 class = "donation-title"><%= donation.title %></h2>
             <p><%=donation.description%></p>
           </div>
       <% end %>

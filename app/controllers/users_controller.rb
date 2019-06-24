@@ -15,16 +15,10 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-    @formTitle = "Crie sua conta"
-    @userPw = "Senha"
-    @userPwConfirmation = "Confirme sua senha"
   end
 
   # GET /users/1/edit
   def edit
-    @formTitle = "Edite seu cadastro"
-    @userPw = "Nova senha"
-    @userPwConfirmation = "Confirme sua nova senha"
   end
 
   # POST /users

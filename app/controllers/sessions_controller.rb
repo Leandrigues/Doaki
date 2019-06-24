@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, notice: "Logged in!"
     else
       flash.now[:alert] = "Email ou senha inválidos"
-      render "new"
+      redirect_to sessions_new_path
     end
   end
   def destroy

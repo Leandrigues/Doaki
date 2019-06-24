@@ -1,0 +1,21 @@
+.block-page-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 2rem;
+}
+
+.block-page-icon {
+    font-size: 10rem!important;
+    color: rgb(255, 83, 83);
+}
+
+.block-page-message {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2rem;
+    text-align: center;
+    font: 
+}

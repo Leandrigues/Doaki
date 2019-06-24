@@ -6,7 +6,6 @@ class DonationsController < ApplicationController
   def index
     # @donations = Donation.all
     @donations = Donation.search(params[:search])
-    @nImages = 0
   end
 
   # GET /donations/1
@@ -20,11 +19,12 @@ class DonationsController < ApplicationController
   # GET /donations/new
   def new
     @donation = Donation.new
+    @aviso = nil
   end
 
   # GET /donations/1/edit
   def edit
-    @donation = Donation.find(params[:id])
+    @aviso = "Se quiser alterar as imagens você deve adicionar todas novamente, utilize a tecla shift."
   end
 
   # POST /donations
@@ -45,7 +45,6 @@ class DonationsController < ApplicationController
         format.json { render json: @donation.errors, status: :unprocessable_entity }
       end
     end
-    @nImages = @donation.images.length
   end
 
   # PATCH/PUT /donations/1

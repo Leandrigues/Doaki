@@ -61,6 +61,13 @@
 	font-weight: bold;
 }
 
+.aviso-imagens {
+	text-align: left;
+	margin: 0;
+	font-size: 0.65rem;
+	color: #fe4141;
+}
+
 .input-description {
 	font-size: 12px;
 	max-width: 100%;

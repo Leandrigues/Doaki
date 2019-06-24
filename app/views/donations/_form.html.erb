@@ -23,6 +23,10 @@
     <%= form.text_field :street, :class => "input-field" %>
   </div>
 
+  <% if @aviso %>
+    <p class="aviso-imagens"><%= @aviso %></p>
+  <% end %>
+
   <div class="label">
     <%= form.label "Fotos", :class => "label-text" %>
     <div class="file-label">

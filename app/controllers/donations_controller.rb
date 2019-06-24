@@ -25,9 +25,6 @@ class DonationsController < ApplicationController
   # GET /donations/1/edit
   def edit
     @donation = Donation.find(params[:id])
-    @donation.images.each do |image|
-      image.purge
-    end
   end
 
   # POST /donations
@@ -55,6 +52,11 @@ class DonationsController < ApplicationController
   # PATCH/PUT /donations/1.json
   def update
     respond_to do |format|
+      if donation_params[:images]
+        @donation.images.each do |image|
+          image.purge
+        end
+      end
       if @donation.update(donation_params)
         format.html { redirect_to @donation, notice: 'Donation was successfully updated.' }
         format.json { render :show, status: :ok, location: @donation }

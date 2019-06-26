@@ -19,7 +19,7 @@
     <ul class="nav-buttons-list">
         <% if current_user %>
             <%= link_to 'DOAR',  new_donation_path, :class => "nav-buttons" %>
-            <%= link_to 'Sair', logout_path, :class => "nav-buttons" %>
+            <%= link_to 'Sair', logout_path, method: :delete, :class => "nav-buttons" %>
             <span class="profile-span">
                 <%= link_to user_path(current_user.id), :class => "profile-hyperlink" do %>
                     <i class="material-icons md-36 profile-icon">account_circle</i>

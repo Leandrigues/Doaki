@@ -74,3 +74,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'material_icons'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+
+# For assert_template method in integration test
+gem 'rails-controller-testing'

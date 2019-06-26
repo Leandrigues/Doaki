@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   # GET /comments
   # GET /comments.json
@@ -42,7 +43,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @comment.donation, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -70,5 +71,11 @@ class CommentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
       params.require(:comment).permit(:body, :user_id, :donation_id)
+    end
+    def require_same_user
+      if current_user != @comment.user and !current_user.admin?
+        flash.now[:alert] = "Você não tem permissão para remover ou editar comentários"
+        redirect_to root_path
+      end
     end
 end

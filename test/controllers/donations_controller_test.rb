@@ -1,48 +1,28 @@
 require 'test_helper'
 
 class DonationsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @donation = donations(:one)
+  def setup
+    @user = User.create(email: "test@donation.com", password: "password", name: "Test User", admin: false)
+    @donation = Donation.create(title: "Test donation", description: "A description for the test", street: "Test street", detail: "Apartment 10 of Block Test", zip: "12345-123", phone: "11912349123", email: "test@donation.com", user_id: 1)
   end
 
   test "should get index" do
-    get donations_url
+    get donations_path
     assert_response :success
   end
 
-  test "should get new" do
-    get new_donation_url
+  test "should get new donation form" do
+    get new_donation_path
     assert_response :success
   end
-
-  test "should create donation" do
-    assert_difference('Donation.count') do
-      post donations_url, params: { donation: { description: @donation.description, detail: @donation.detail, email: @donation.email, phone: @donation.phone, street: @donation.street, title: @donation.title, zip: @donation.zip } }
-    end
-
-    assert_redirected_to donation_url(Donation.last)
-  end
-
-  test "should show donation" do
-    get donation_url(@donation)
-    assert_response :success
-  end
-
-  test "should get edit" do
+  
+  test "should get edit form" do
     get edit_donation_url(@donation)
     assert_response :success
   end
 
-  test "should update donation" do
-    patch donation_url(@donation), params: { donation: { description: @donation.description, detail: @donation.detail, email: @donation.email, phone: @donation.phone, street: @donation.street, title: @donation.title, zip: @donation.zip } }
-    assert_redirected_to donation_url(@donation)
-  end
-
-  test "should destroy donation" do
-    assert_difference('Donation.count', -1) do
-      delete donation_url(@donation)
-    end
-
-    assert_redirected_to donations_url
+  test "should get show" do
+    get donation_path(@donation)
+    assert_response :success
   end
 end

@@ -29,17 +29,4 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     get comment_path(@comment)
     assert_response :success
   end
-
-  # test "should update comment" do
-  #   patch comment_url(@comment), params: { comment: { body: @comment.body, donation_id: @comment.donation_id, user_id: @comment.user_id } }
-  #   assert_redirected_to comment_url(@comment)
-  # end
-
-  # test "should destroy comment" do
-  #   assert_difference('Comment.count', -1) do
-  #     delete comment_url(@comment)
-  #   end
-
-  #   assert_redirected_to comments_url
-  # end
 end
